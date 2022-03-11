@@ -53,7 +53,7 @@ if(isset($_POST['submit'])){
     $message = $_POST['message'];
     $captcha = $_POST['captcha'];
 
-    $mailTo = "main@ericmoser.com";
+    $mailTo = "contact@ericmoser.com";
     // $mailTo = "todd@brookstoneprinting.com";
 
     $headers = "From: ".$mailFrom;
