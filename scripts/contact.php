@@ -57,6 +57,7 @@ if(isset($_POST['submit'])){
     // $mailTo = "todd@brookstoneprinting.com";
 
     $headers = "From: ".$mailFrom;
+    // $headers = "From: Eric Moser <contact@ericmoser.com> \r\n";
     
     //Adding the rest of these helped make the email not go to spam in gmail
     $headers = "Reply-To: ".$mailFrom;
