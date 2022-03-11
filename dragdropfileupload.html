@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .dropzone{
+            width: 300px;
+            height: 300px;
+            border: 2px dashed lightblue;
+            line-height: 300px;
+            text-align: center;
+        }
+
+        .dropzone.dragover{
+            border-color: black;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="uploads" ></div>
+    <div class="dropzone" id="dropzone" >Drop Files here to Upload</div>
+
+    <script>
+        (function(){
+            var dropzone = document.getElementById('dropzone');
+            
+            var displayUploads = function(data){
+                var uploads = document.getElementById('uploads'),
+                    anchor, 
+                    x;
+
+                for(x = 0; x < data.length; x = x + 1){
+                    anchor = document.createElement('a');
+                    anchor.href = data[x].file;
+                    anchor.innerText = data[x].name;
+
+                    uploads.appendChild(anchor);
+                }
+            };
+
+
+
+            var upload = function(files){
+                console.log(files);
+                var formData = new FormData(),
+                    xhr = new XMLHttpRequest(),
+                    x;
+
+                for(x = 0; x < files.length; x = x + 1){
+                    formData.append('file[]', files[x]);
+                }
+
+                xhr.onload = function(){
+                    var data = this.responseText;
+                    console.log(data);
+
+                    // This is failing for some reason..
+                    // var data = JSON.parse(this.responseText);
+                    // displayUploads(data);
+                }
+
+                xhr.open('post', 'uploaddragdrop.php');
+                xhr.send(formData);
+            }
+
+            dropzone.ondrop = function(e){
+                e.preventDefault();
+                this.className = 'dropzone';
+                upload(e.dataTransfer.files);
+            };
+
+            dropzone.ondragover = function(){
+                this.className = 'dropzone dragover';
+                return false;
+            };
+
+            dropzone.ondragleave = function(){
+                this.className = 'dropzone';
+                return false;
+            };
+
+        }());
+    </script>
+</body>
+
+</html>

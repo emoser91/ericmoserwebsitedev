@@ -1,0 +1,45 @@
+<!-- This is using the Google API  -->
+<!-- This method uses the full Google Maps API Javascript that will allow you to fully customize everything -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Simple Map</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 50%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>My Map</h1>
+    <div id="map"></div>
+    <script>
+      var map;
+      function initMap() {
+          var location = {lat: 43.228, lng: -88.105};
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: location,
+          zoom: 15
+        });
+        var marker = new google.maps.Marker({
+            position: location, 
+            map: map
+        });
+      }
+    </script>
+    <!-- You need to restrict the key to the url of the webpage we are using it on -->
+    <!-- You need a billing account and as long as you dont go over too many uses, then it is free -->
+    <!-- <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"
+    async defer></script> -->
+  </body>
+</html>

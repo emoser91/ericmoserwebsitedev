@@ -1,0 +1,2417 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+:root {
+    /* --maincolor: #cc3843 ; */
+    --maincolor: #00e472;
+    /* --maincolor: #00ffbd; */
+    /* --maincolor: rgb(20, 241, 149); */
+    --secondarycolor: #1e1e1e;
+    --maincoloralpha: rgba(2, 120, 137, .75);
+    --accentcolor: #001489;
+    /* --black: #1e1e1e; */
+    /* --black: #232323; */
+    --black: #000;
+    --gray: #444;
+    --offwhite: #f4f0ec;
+    --green: #10893E;
+    --fullwidth: 100%;
+}
+
+/* Change the Placeholder Text color for Modal on all web browsers */
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:white;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:white;
+   opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:white;
+   opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color:white;
+}
+::-ms-input-placeholder { /* Microsoft Edge */
+   color:white;
+}
+::placeholder { /* Most modern browsers support this now. */
+   color:white;
+}
+
+/* Scroll Bar */
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+    background: var(--black);
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--maincolor);
+    border-radius: 10px;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: var(--green);
+}
+
+/* Section */
+.section {
+    width: 100%;
+}
+
+.version{
+    display:block;
+    position: absolute;
+    margin-top: 60px;
+    margin-left: 46%;
+}
+.version p{
+    font-size: 20px;
+}
+
+/* Makes content not selectable */
+.noSelect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    /* Handles android blue highlight if not pointer */
+    -webkit-tap-highlight-color: transparent;
+}
+
+.noSelect:focus {
+    outline: none !important;
+}
+
+.container {
+    position: relative;
+    width: 1170px;
+    margin: 0 auto;
+    color: white;
+    font-size: 14px;
+    font-weight: 300;
+    font-family: Roboto, 'Open Sans', Arial, sans-serif;
+    overflow: hidden;
+}
+
+.section .container {
+    padding: 30px 0 50px 0;
+}
+
+.section.offwhite{
+    background: var(--offwhite);
+}
+
+/* .section.bg {
+    background:#4D6D9A;
+} */
+
+.section.black{
+    background:var(--black);
+}
+
+/* var(--maincolor) 40%, var(--black) 20% 40%); */
+.section.split{
+    background: linear-gradient(to bottom,
+    var(--black) 40%, var(--maincolor) 40% 80%, var(--black) 80%);
+}
+
+.section.cta{
+    background: linear-gradient(to top,
+     var(--maincolor) 82%, var(--black) 18%);
+}
+
+.section.blue{
+    background: var(--maincolor);
+}
+
+.highlight{
+    color:var(--maincolor);
+}
+
+/* ///////////////////////////////////////////// */
+/* Text */
+/* ///////////////////////////////////////////// */
+.container > h1:not(.hero) {
+    text-align: center;
+    font-size: 3.5em;
+    color: var(--maincolor);
+}
+
+h2 {
+    font-family: 'Roboto Slab', sans-serif;
+    text-align: center;
+    font-weight: 400;
+    font-size: 20px;
+    margin: 0% 15% 5%;
+    letter-spacing: 1px;
+}
+
+.left,
+.left > h1, .left > h2, 
+.left > p {
+    text-align: left;
+}
+
+.right,
+.right > h1, .right > h2,
+.right > p {
+    text-align: right;
+}
+
+.reset {
+    text-align: left !important;
+}
+
+.reset:after {
+    display: none !important;
+}
+
+.white h1,
+.white h2,
+.white p,
+.white div,
+.white a {
+    color: white;
+}
+
+/* ///////////////////////////////////////////// */
+/* Header Desktop */
+/* ///////////////////////////////////////////// */
+.hold {
+    height: 60px;
+    display:block;
+}
+
+/* Used a id tag to overwrite the container fixed padding */
+#box{
+    padding:0;
+}
+
+.infotext{
+    color:white;
+    font-family: Roboto, 'Open Sans', Arial, sans-serif;
+    text-align: center;
+    background: var(--black);
+    height: 25px;
+    line-height: 25px;
+}
+
+.header {
+    /* Set line height to 100 if info banner is removed */
+    line-height: 125px;
+    width: 100%;
+    transition: line-height 0.2s linear, box-shadow 0.2s linear;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    margin: 0 auto;
+
+    font-size: 14px;
+    font-weight: 300;
+    font-family: Roboto, 'Open Sans', Arial, sans-serif;
+    overflow: hidden;
+}
+
+.header.small {
+    line-height: 60px;
+    box-shadow: 0px 1px 3px 0px rgba(50, 50, 50, 0.8);
+    background: rgba(30, 30, 30, 95);
+}
+
+#logo {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-image: url("../images/EricMoserLogo2.SVG");
+    background-repeat: no-repeat;
+    background-size: contain;
+    float: left;
+    height: 55px;
+    width: 60px;
+    margin-left: 5px;
+}
+
+ul.nav {
+    float: right;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul.nav li {
+    float: left;
+    position: relative;
+}
+
+ul.nav li a {
+    transition: color 0.2s linear;
+    font-size: 1.25em;
+    /* TODO decide if I want heavier text or not here */
+    /* font-weight: 700; */
+    padding: 21px;
+    color: white;
+    text-decoration: initial;
+}
+
+ul.nav li:hover a {
+    /* border-bottom: 2px solid var(--maincolor); */
+    color: var(--maincolor);
+}
+
+/* button{
+    margin-left: 20px;
+    padding: 9px 25px;
+    background-color: transparent;
+    background-image: linear-gradient(-45deg, #cc3843 0%, #cb193f 100%);
+    /* background-color: var(--maincolor);
+    border: 3px solid var(--maincolor);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    font-family: 'Roboto Slab', sans-serif;
+    color: white;
+    font-weight: normal;
+    font-size:20px;
+} */
+
+/* button:hover{
+    transition: all 0.1s ease 0s;
+    background-image: none;
+    color: var(--maincolor);
+} */
+
+button{
+    margin-left: 10px;
+    padding: 9px 25px;
+    background-color: transparent;
+    background-image: none;
+    /* box-shadow: 0 7px 99px 0 rgb(204 51 66 / 60%); */
+    /* background-color: var(--maincolor); */
+    border: 2px solid var(--maincolor);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    font-family: 'Roboto Slab', sans-serif;
+    color: white;
+    font-weight: normal;
+    font-size: 1.25em;
+}
+
+button:hover{
+    transition: all 0.1s ease 0s;
+    /* background-image: linear-gradient(-45deg, #cc3843 0%, #cb193f 100%); */
+    background-color: var(--maincolor);
+    color: black; 
+}
+
+
+/* ///////////////////////////////////////////// */
+/* Burger Menu */
+/* ///////////////////////////////////////////// */
+.burgernav {
+    line-height: 65px;
+    width: 100%;
+    transition: line-height 0.2s linear, box-shadow 0.2s linear;
+    position: fixed;
+    top: 10;
+    left: 0;
+    z-index: 100;
+    display:none;
+    height:60px;
+}
+
+.burgernav.small{
+    top: 0;
+    box-shadow: 0px 1px 3px 0px rgba(50, 50, 50, 0.8);
+    background: rgba(30, 30, 30, 0.95);
+}
+
+.infotextmobile{
+    color:white;
+    font-family: Roboto, 'Open Sans', Arial, sans-serif;
+    text-align: center;
+    background: var(--black);
+    height: 25px;
+    line-height: 25px;
+    display:none;
+}
+
+#logocentered {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-image: url("../images/EricMoserLogo2.SVG");
+    background-repeat: no-repeat;
+    background-size: contain;
+    float: left;
+    height: 41px;
+    width: 50px;
+    margin-left: 5vw;
+    margin-top: 5px;
+}
+
+#hamburger-button {
+    position: relative;
+    left: 92vw;
+    z-index: 9999;
+    display: inline-block;
+    vertical-align: center;
+    height: 15px;
+    width: 20px;
+}
+
+#hamburger-button:hover {
+    cursor: pointer;
+}
+
+#hamburger-button>span {
+    display: block;
+    height: 3px;
+    margin-bottom: 3px;
+    width: 20px;
+    background-color: white;
+    -webkit-transition-timing-function: linear;
+    /* Safari and Chrome */
+    transition-timing-function: linear;
+    transition-duration: 1s;
+}
+
+#hamburger-button.open>span:first-child {
+    -webkit-transform: translateY(6px) rotate(45deg);
+    /* Chrome, Safari, Opera */
+    transform: translateY(6px) rotate(45deg);
+}
+
+
+#hamburger-button.open>span:nth-child(2) {
+    -webkit-transform: rotateY(90deg);
+    /* Safari */
+    transform: rotateY(90deg);
+    /* rotates the second child on the Y AXIS ONLY 90 degrees so it disappears into a point */
+}
+
+#hamburger-button.open>span:last-child {
+    -webkit-transform: translateY(-6px) rotate(-45deg);
+    /* Chrome, Safari, Opera */
+    transform: translateY(-6px) rotate(-45deg);
+}
+
+.navbar {
+    position: absolute;
+    opacity: .9;
+    z-index: 888;
+    /*so its above the content but below the burger button*/
+    height: 100vh;
+    width: 75vw;
+    right: -75vw;
+    transition: 1s;
+    background-color: var(--black);
+}
+
+.navbar.open {
+    right: 0;
+}
+
+.navbar ul {
+    padding:0;
+    list-style: none;
+    margin-top: 10%;
+    font-size: 1.50em;
+    font-weight: 400;
+    font-family: sans-serif;
+}
+
+.navbar ul li {
+    padding: 2px;
+    text-align: center;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white
+}
+
+.navbar ul li a:hover {
+    /* text-shadow: 1px 1px 3px #160060; */
+    color: var(--maincolor);
+    opacity: 1;
+    cursor: pointer;
+}
+
+/* ///////////////////////////////////////////// */
+/* Slider */
+/* ///////////////////////////////////////////// */
+.col .slidertext{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 300px;
+    /* width: 95%; */
+    margin-left:10%;
+}
+
+.col .slidertext h1{
+    margin: 0px;
+    width:100%;
+    color:var(--gray);
+    font-size: 5em;
+    color:var(--offwhite);
+}
+
+.col .slidertext h2{
+    width:100%;
+    color: var(--maincolor);
+    font-size: 1.50em;
+    margin: 0;
+    margin-left: 2%;
+}
+
+.col .slidertext p{
+    line-height: 30px;
+    font-size: 1.75em;
+    /* text-align: left; */
+}
+
+.section .slider{
+    height:100vh;
+    /* Background color is just for the second for the video to load */
+    background-color: var(--black);
+    /* Not sure why we have this when we have media with 100vh maybe issues with 4k screens??*/
+    /* height:1400px; */
+}
+
+.section .slider video{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* opacity: 0.8; */
+}
+
+.slidercontent {
+    top:20vh;
+}
+
+.cta{
+    text-decoration: none;
+}
+
+herobutton{
+    margin-left: 10%;
+    left: 50%;
+    padding: 9px 25px;
+    background-color: transparent;
+    border: 2px solid var(--maincolor);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    font-family: 'Roboto Slab', sans-serif;
+    color: white;
+    font-weight: normal;
+    font-size:2em;
+}
+
+herobutton:hover{
+    transition: all 0.3s ease 0s;
+    background-color: var(--maincolor);
+    color:#181818;
+}
+
+/* ///////////////////////////////////////////// */
+/* Scroll Arrow */
+/* ///////////////////////////////////////////// */
+.downarrow-wrap {
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    /* top: 140em; */
+    top:80vh;
+    margin-left: -5em;
+    background: #111;
+    /* width: 10em;
+    height: 10em; */
+    padding: 3.5em 2em;
+    border-radius: 50%;
+    font-size: 0.5em;
+    display: block;
+    /* box-shadow: 0px 0px 5px 0px #333; */
+    box-shadow: 0px 0px 5px 0px var(--maincolor);
+}
+
+.downarrow {
+    float: left;
+    position: relative;
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 3em 3em 0 3em;
+    border-color: white transparent transparent transparent;
+    -webkit-transform: rotate(360deg)
+}
+
+.downarrow:after {
+    content: '';
+    position: absolute;
+    top: -3.2em;
+    left: -3em;
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 3em 3em 0 3em;
+    border-color: #111 transparent transparent transparent;
+    -webkit-transform: rotate(360deg);
+}
+
+
+.hint {
+    position: absolute;
+    top: 0.6em;
+    width: 100%;
+    left: 0;
+    font-size: 2em;
+    font-style: italic;
+    text-align: center;
+    color: white;
+    opacity: 0;
+}
+
+
+.downarrow-wrap:hover .hint {
+    opacity: 1;
+}
+
+
+@-webkit-keyframes arrows {
+    0% {
+        top: 0;
+    }
+
+    10% {
+        top: 12%;
+    }
+
+    20% {
+        top: 0;
+    }
+
+    30% {
+        top: 12%;
+    }
+
+    40% {
+        top: -12%;
+    }
+
+    50% {
+        top: 12%;
+    }
+
+    60% {
+        top: 0;
+    }
+
+    70% {
+        top: 12%;
+    }
+
+    80% {
+        top: -12%;
+    }
+
+    90% {
+        top: 12%;
+    }
+
+    100% {
+        top: 0;
+    }
+}
+
+.downarrow-wrap .downarrow {
+    -webkit-animation: arrows 2.8s 0.4s;
+    -webkit-animation-delay: 3s;
+}
+
+/* ///////////////////////////////////////////// */
+/* Columns */
+/* ///////////////////////////////////////////// */
+.col {
+    float: left;
+    padding: 0;
+    margin: 0;
+    position: relative;
+}
+
+.col.one{
+    position:center;
+    display: inline-block;
+    width:100%;
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.or{
+    text-align: center;
+    margin: 0 auto;
+    float:none;
+    padding: 0;
+}
+
+.col.three {
+    /* width:48%; */
+    width: 31.3%;
+    margin: 1% 1%;
+    /* border-radius: 2%; */
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    /* background-color: var(--secondarycolor); */
+}
+
+.col.two {
+    /* margin-top: 80px; */
+    /* position:center;
+    justify-content: center; */
+    /* width:50%; */
+    /* old things */
+    width: 49%;
+    margin: .5% .5%;
+    /* padding: 0 .2%; */
+    /* background: lightgray; */
+}
+
+.col.hero{
+    width: 60%;
+}
+
+.col.extrapad {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.col .about,
+.col .feature {
+    font-size: 21px;
+    font-weight: 300;
+    font-family: 'Roboto Slab', sans-serif;
+}
+
+.col .feature {
+    font-size: 19px;
+}
+
+.col h1.side,
+.col p.side,
+.col span.side:first-of-type {
+    margin-left: 50px;
+    text-align: left;
+}
+
+.col .icon {
+    border-radius: 50%;
+    height: 85px;
+    width: 85px;
+    line-height: 85px;
+    text-align: center;
+    margin: 0 auto;
+    transition: background 0.25s linear, color 0.25s linear;
+}
+
+.col .icon.side {
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    top: -15px;
+    height: 50px;
+    width: 50px;
+}
+
+.col:hover > .icon.side {
+    background: initial;
+    color: initial;
+}
+
+.col.customer{
+    border-radius: 50%;
+    height: 85px;
+    width: 85px;
+    line-height: 85px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.responsivegroup {
+    display: none;
+}
+
+/* ///////////////////////////////////////////// */
+/* Column specifics */
+/* ///////////////////////////////////////////// */
+.col p,
+.col h1 {
+    padding: 0 1%;
+    /* TODO had to remove to fix hero section */
+    /* text-align: center; */
+}
+
+.group.margin {
+    margin-bottom: 20px;
+}
+
+/* ///////////////////////////////////////////// */
+/* Column specifics for image holder */
+/* ///////////////////////////////////////////// */
+/* AwesomeFont Icon Folder*/
+.col .imgholder i, .col .imgholderadd i{
+    position: relative;
+    left:20px;
+    top:20px;
+    color:var(--maincolor);
+}
+
+/* AwesomeFont Icon Github*/
+.col .imgholder j, .col .imgholderadd j{
+    position: relative;
+    /* left:280px; */
+    left:70%;
+    top:10px;
+    color:var(--maincolor);
+}
+
+.col .imgholder, .col .imgholderadd {
+    height: 300px;
+    width: 100%;
+    background: var(--secondarycolor);
+
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease
+}
+
+.col .imgholder:hover, .col .imgholderadd:hover {
+    background-color:var(--gray);
+
+    -webkit-transform:translateY(-10px);
+    transform: translateY(-10px)
+}
+
+.col .imgholder .title, .col .imgholderadd .title {
+    font-size: 1.5em;
+    font-weight: 600;
+    margin-top:30px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+/* TODO: had to keep p at 1em instead of 1.1em to fit. Might be able to chage with less text in boxes. */
+.col .imgholder p, .col .imgholderadd p{
+    font-size: 1em;
+    margin-top:10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    text-align: left;
+    padding:0;
+}
+
+.col .imgholder footer .projecttechlist, .col .imgholderadd footer .projecttechlist{
+    display:flex;
+    align-items: flex-end;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    padding: 0px;
+    margin: 20px 0px 0px;
+    list-style: none;
+}
+
+.col .imgholder footer .projecttechlist li, .col .imgholderadd footer .projecttechlist li{
+    margin-left: 20px;
+}
+
+.col .imgholder:focus, .col .imgholderadd:focus{
+    outline: none !important;
+}
+
+/* More Images Option */
+.col .imgholderadd{
+    display:none;
+}
+
+.col .imgholderadd.show{
+    display:block;
+    height: 300px;
+    width: 100%;
+}
+
+/* ///////////////////////////////////////////// */
+/* Column specifics for About Section*/
+/* ///////////////////////////////////////////// */
+.aboutwrapper{
+    display:grid;
+    grid-template-columns:repeat(12, 1fr);
+    grid-auto-rows:minmax(350px, auto);
+    grid-gap:1em;
+    margin:1% 1%;
+    justify-items:stretch;
+    align-items:stretch;
+}
+
+.aboutbox1{
+    grid-column:7/13;
+    grid-row:1;
+    /* TODO pick a color for here or just make it transperent */
+    background:rgb(0, 83, 44);
+}
+
+.aboutbox1:hover{
+    background-color:var(--gray);
+}
+
+.aboutbox2{
+    grid-column:1/8;
+    grid-row:1;
+}
+
+.abouttext{
+    margin-top: 10px;
+}
+
+.aboutbox2 h1{
+    font-size: 1.75em;
+    /* margin-top: 75px; */
+}
+
+.aboutbox2 h3{
+    margin-bottom: 0;
+    color: var(--maincolor);
+}
+
+.aboutbox2 .aboutpwrapperbox{
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    background-color: var(--secondarycolor);
+}
+
+.aboutbox2 p{
+    margin-left:20px;
+    margin-right: 20px;
+    font-size: 1.1em;
+}
+
+/* ///////////////////////////////////////////// */
+/* Skills Section */
+/* ///////////////////////////////////////////// */
+.col .skillstext{
+    display: flex;
+    /* justify-content: center;
+    align-items: center; */
+    flex-direction: column;
+    width: 80%;
+    margin-left:10%;
+    /* text-align: center; */
+}
+
+h1.skillstext{
+    color: white;
+    margin-top: 30px;
+}
+
+h2.skillstext{
+    width:100%;
+    color: var(--maincolor);
+    font-size: 1.5em;
+    text-align: left;
+}
+
+p.skillstext{
+    width:100%;
+    color: white;
+    font-size: 1.1em;
+    font-weight: normal;
+    margin-bottom: 20px;
+}
+
+/* AwesomeFont Icon Github*/
+.col l {
+    position: relative;
+    /* left:45%; */
+    left: 12%;
+    top:20px;
+    color:var(--maincolor);
+}
+
+/* ///////////////////////////////////////////// */
+/* Timeline */
+/* ///////////////////////////////////////////// */
+.timeline{
+    background:var(--black);
+    padding: 50px 0 0px 0;
+}
+.timeline ul {
+    padding: 0px 0;
+    color: white; /* Text color */
+    overflow-x: hidden;
+    padding-bottom: 50px;
+}
+
+.timeline ul li {
+    list-style-type: none;
+    position: relative;
+    width: 6px;
+    margin: 0 auto;
+    padding-top: 50px;
+     /* vertical timeline color */
+    background: var(--maincolor);
+}
+
+.timeline ul li::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: inherit;
+}
+
+.timeline ul li div {
+    position: relative;
+    bottom: 0;
+    width: 485px;
+    padding: 15px;
+    background: var(--secondarycolor);
+    border: 4px solid var(--secondarycolor);
+}
+
+.timeline ul li div::before {
+    content: '';
+    position: absolute;
+    bottom: 7px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+}
+
+.timeline ul li:nth-child(odd) div {
+    left: 45px;
+}
+
+.timeline ul li:nth-child(odd) div::before {
+    left: -15px;
+    border-width: 8px 16px 8px 0;
+    border-color: transparent var(--maincolor) transparent transparent;
+}
+
+.timeline ul li:nth-child(even) div {
+    right:560px;
+}
+
+.timeline ul li:nth-child(even) div::before {
+    right: -15px;
+    border-width: 8px 0 8px 16px;
+    border-color: transparent transparent transparent var(--maincolor);
+}
+
+time {
+    color: var(--maincolor);
+    display: block;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.timeline h1{
+    color:white;
+    font-size: 1.25rem;
+    margin-top: 0px;
+
+}
+
+.timeline h2{
+    color:white;
+    text-align: left;
+    margin-left: 0;
+    font-size: 1rem;
+}
+
+.timeline p{
+    font-size: 1.1em;
+}
+
+.timeline footer dl{
+    display:flex;
+    align-items: flex-end;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    padding: 0px;
+    margin: 20px 0px 0px;
+    list-style: none;
+}
+
+.timeline footer di{
+    margin-right: 20px;
+}
+
+/* ///////////////////////////////////////////// */
+/* Timeline Media Queries */
+/* ///////////////////////////////////////////// */
+/* TODO: Make this section responive like the rest of the sections */
+@media screen and (max-width: 1200px) {
+    .timeline ul li div {
+        width: 350px;
+    }
+
+    .timeline ul li:nth-child(even) div {
+        left: -425px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .timeline ul li div {
+        width: 265px;
+    }
+
+    .timeline ul li:nth-child(even) div {
+        left: -340px;
+    }
+}
+
+/* Used to be at 700px but I have too much text for it to look good. */
+@media screen and (max-width: 900px) {
+    .timeline ul li {
+        margin-left: 20px;
+    }
+
+    .timeline ul li div {
+        width: calc(90vw - 91px);
+    }
+
+    .timeline ul li:nth-child(even) div {
+        left: 45px;
+    }
+
+    .timeline ul li:nth-child(even) div::before {
+        left: -15px;
+        border-width: 8px 16px 8px 0;
+        border-color: transparent var(--maincolor) transparent transparent;
+    }
+
+    /* .section .slider{
+        height: 313px;
+        background-size: 500px 313px;
+    } */
+
+    .section.map{
+        overflow:hidden;
+        padding-bottom:56.25%;
+        position:relative;
+        height:400px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    #aboutusimage1{
+        background-size: 125%;
+    }
+
+    .timeline ul li:nth-child(even) div {
+        left: 35px;
+    }
+
+    .timeline ul li:nth-child(odd) div {
+        left: 35px;
+    }
+}
+
+/* ///////////////////////////////////////////// */
+/* Column specifics for Project Section*/
+/* ///////////////////////////////////////////// */
+.serviceswrapper{
+    display:grid;
+    grid-template-columns:repeat(12, 1fr);
+    grid-auto-rows:minmax(350px, auto);
+    grid-gap:1em;
+    margin: 1% 1%;
+    justify-items:stretch;
+    align-items:stretch;
+    /* margin-bottom: 100px; */
+}
+
+.serviceswrapper.margin{
+    margin-bottom: 100px;
+}
+
+.box1{
+    grid-column:1/8;
+    grid-row:1;
+    /* TODO pick a color for here or just make it transperent */
+    background:rgb(0, 83, 44)
+}
+
+.box1:hover, .box1left:hover{
+    background-color:var(--gray);
+}
+
+.box2{
+    grid-column:7/13;
+    grid-row:1;
+}
+
+.box1left{
+    grid-column:6/13;
+    grid-row:1;
+    /* TODO pick a color for here or just make it transperent */
+    background:rgb(0, 83, 44)
+}
+
+.box2left{
+    grid-column:1/7;
+    grid-row:1;
+}
+
+.box2 .servicetext, .box2left .servicetext{
+    margin-top: 40px;
+}
+
+.box2 h1, .box2left h1{
+    margin-top: 0;
+}
+
+.box2 h3, .box2left h3{
+    margin-bottom: 0;
+    color: var(--maincolor);
+}
+
+.box2 .pwrapperbox, .box2left .pwrapperbox{
+    width: 100%;
+    /* height: 100px; */
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    background-color: var(--secondarycolor);
+}
+
+.box2 p{
+    margin-right: 20px;
+    margin-left: 20px;
+    font-size: 1.1em;
+}
+
+.box2left p{
+    margin-left: 20px;
+    font-size: 1.1em;
+}
+
+.box2 footer ul{
+    display:flex;
+    align-items: flex-end;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    padding: 0px;
+    margin: 0;
+    list-style: none;
+    justify-content: right;
+}
+
+.box2 footer li{
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.box2left footer ul{
+    display:flex;
+    align-items: flex-end;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    padding: 0px;
+    margin: 0;
+    list-style: none;
+    justify-content: left;
+}
+
+.box2left footer li{
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+/* AwesomeFont Icon Folder*/
+.box2 k, .box2left k{
+    color:var(--maincolor);
+}
+
+/* used for col three background */
+.col.bg {
+    background: var(--secondarycolor);
+}
+
+/* Note that pointer might add blue highlight on android */
+.col.pointer {
+    cursor: pointer;
+}
+
+.col span.feature {
+    font-size: 20px;
+}
+
+/* ///////////////////////////////////////////// */
+/* Project Section */
+/* ///////////////////////////////////////////// */
+#projectimage1{
+    background-image: url("../images/BSImage.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#projectimage2{
+    background-image: url("../images/capturetest.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#projectimage3{
+    background-image: url("../images/SeniorDesignImage.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* ///////////////////////////////////////////// */
+/* Column specifics for Servies Button Container*/
+/* ///////////////////////////////////////////// */
+.service-tabs-container {
+    display: flex;
+    width: 15%;
+    margin-top:0px;
+    margin-left:42.5%;
+    margin-bottom: 50px;
+    height: 50px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.service-tab {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    /* letter-spacing: 0.1rem; */
+    transition: all 0.3s ease;
+    font-size: 1.5em;
+    /* Use this for tablet */
+    /* font-size: 0.8rem; */
+    text-decoration: none;
+    border: 2px solid var(--maincolor);
+    color:white;
+    border-radius: 5px;
+    background: transparent;
+}
+
+.service-tab:hover {
+    background: var(--maincolor);
+    color:black;
+    cursor: pointer;
+
+}
+
+/* ///////////////////////////////////////////// */
+/* Icons and images */
+/* ///////////////////////////////////////////// */
+
+/* ///////////////////////////////////////////// */
+/* About Section */
+/* ///////////////////////////////////////////// */
+#aboutmeimage{
+    background-image: url("images/Eric.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* border-radius: 50%; */
+}
+
+/* ///////////////////////////////////////////// */
+/* Call to Action Section */
+/* ///////////////////////////////////////////// */
+.section.cta h1{
+    color: var(--maincolor);
+    font-size: 2.5em;
+}
+
+.section.cta h3{
+    color: white;
+    font-size: 1.25em;
+    font-weight: normal;
+}
+
+.ctawrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height:200px;
+    margin-left: 0%;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    /* TODO change color */
+    background-color: var(--secondarycolor);
+    border-radius: 30px;
+}
+
+.col.cta {
+     width: 33.3%;
+     margin: 0% 0%;
+}
+
+.col.one a{
+    text-decoration: none; /* remove hyperlink from buttons */
+}
+
+buttonreachout{
+    margin-left: 30%;
+    padding: 9px 25px;
+    background-color: transparent;
+    border: 2px solid var(--maincolor);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    font-family: 'Roboto Slab', sans-serif;
+    color: white;
+    font-weight: normal;
+    font-size:1.5em;
+}
+
+buttonreachout:hover{
+    transition: all 0.3s ease 0s;
+    background-color: var(--maincolor);
+    color:#181818;
+}
+
+.col .ctatext{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    margin-left:0%;
+    text-align: center;
+}
+
+h1.ctatext{
+    color: white;
+}
+
+h2.ctatext{
+    width:100%;
+    color: black;
+    font-size: 1.5em;
+}
+
+h2.ctatext.bottom{
+    margin-top: 50px;
+    margin-bottom: 0;
+}
+
+h3.ctatext.bottom{
+    color: black;
+    margin: 1% 1%;
+}
+
+#logocta{
+    display: flex;
+    background-image: url("../images/EricMoserLogoBlack.SVG");
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 80px;
+    width: 80px;
+}
+
+#logocta.ctalogoholder{
+    margin-top: 20px;
+    margin-bottom: 40px;
+    margin-left: 47%;
+}
+
+.container.cta{
+    padding: 30px 0 0 0;
+}
+
+/* ///////////////////////////////////////////// */
+/* Social Media Icons */
+/* ///////////////////////////////////////////// */
+#social {
+    /* margin: 20px 10px; */
+    margin: 40px;
+    text-align: center;
+}
+
+.smGlobalBtn { /* global button class */
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    border:2px solid var(--black); /* add border to the buttons */
+    box-shadow: 0 3px 3px #999;
+    padding: 0px;
+    text-decoration: none;
+    text-align: center;
+    color: #fff;
+    font-size: 25px;
+    font-weight: normal;
+    line-height: 2em;
+    border-radius: 27px;
+    -moz-border-radius:27px;
+    -webkit-border-radius:27px;
+}
+
+.githubBtn{
+    background: #333;
+}
+
+.githubBtn:before{
+    font-family: "FontAwesome";
+    content: "\f09b"; /* add github icon */
+}
+
+.githubBtn:hover{
+    color: #333;
+    background: transparent;
+    border-color: #333;
+}
+
+.linkedinBtn{
+    background: #0094BC;
+}
+
+.linkedinBtn:before{
+    font-family: "FontAwesome";
+    content: "\f0e1"; /* add linkedin icon */
+}
+
+.linkedinBtn:hover{
+    color: #0094BC;
+    background: #fff;
+    border-color: #0094BC;
+}
+
+.facebookBtn{
+    background: #4060A5;
+}
+
+.facebookBtn:before{ /* use :before to add the relevant icons */
+    font-family: "FontAwesome";
+    content: "\f09a"; /* add facebook icon */
+}
+
+.facebookBtn:hover{
+    color: #4060A5;
+    background: #fff;
+    border-color: #4060A5; /* change the border color on mouse hover */
+}
+
+.twitterBtn{
+    background: #00ABE3;
+}
+
+.twitterBtn:before{
+    font-family: "FontAwesome";
+    content: "\f099"; /* add twitter icon */
+    
+}
+
+.twitterBtn:hover{
+    color: #00ABE3;
+    background: #fff;
+    border-color: #00ABE3;
+}
+
+.instagramBtn{
+    background: #262626;
+}
+
+.instagramBtn:before{
+    font-family: "FontAwesome";
+    content: "\f16d"; /* add instagram icon */
+}
+
+.instagramBtn:hover{
+    color: #262626;
+    background: #fff;
+    border-color: #262626;
+}
+
+.codepenBtn{
+    background: #3a5876;
+}
+
+.codepenBtn:before{
+    font-family: "FontAwesome";
+    content: "\f1cb"; /* add codepen icon */
+}
+
+.codepenBtn:hover{
+    color: #3a5876;
+    background: #fff;
+    border-color: #3a5876;
+}
+
+.dribbleBtn{
+    background: #0d0c22;
+}
+
+.dribbleBtn:before{
+    font-family: "FontAwesome";
+    content: "\f17d"; /* add rss icon */
+}
+
+.dribbleBtn:hover{
+    color: #0d0c22;
+    background: #fff;
+    border-color: #0d0c22;
+}
+
+/* ///////////////////////////////////////////// */
+/* Modal Section */
+/* ///////////////////////////////////////////// */
+.bg-modal{
+    width:100%;
+    height:100%;
+    background-color:rgba(0, 0, 0, 0.7);
+    position:absolute;
+    top:0;
+    z-index: 100;
+    justify-content: center;
+    align-items: center;
+    display:none;
+    overflow-x: hidden;
+}
+
+.modal-content {
+    margin: 0;
+    padding: 0;
+    /* font-family: 'Josefin Sans', sans-serif; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 350px;
+    width: 100%;
+    background: var(--secondarycolor);
+    padding: 25px;
+    border-radius: 5px;
+    box-shadow: 4px 4px 2px #423D33;
+}
+
+.modal-content h2 {
+    text-align: center;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 2em;
+    color: var(--maincolor);
+}
+
+/* .modal-content .input_field {
+    margin-bottom: 10px;
+} */
+
+/* AwesomeFont Icons */
+.modal-content .input_field i{
+    position: relative;
+    /* right:150px; */
+    right:45%;
+    top:27px;
+    color:white;
+}
+
+form{
+    position:center;
+    display: inline-block;
+    width: 95%;
+    text-align: center;
+}
+
+.modal-content .input_field input[type="text"],
+.modal-content textarea {
+    background-color: var(--secondarycolor);
+    border: 1px solid white;
+    width: 95%;
+    padding: 10px 10px 10px 30px;
+}
+
+.modal-content .input_field input[type="text"]{
+    color: white;
+}
+
+/* Message Box */
+.modal-content textarea {
+    resize: none;
+    height: 80px;
+    color:white;
+    /* Margin if the reCAPTCHA needs it */
+    margin-bottom: 10px; 
+}
+
+.modal-content .btn{
+    display: flex;
+    width: 50%;
+    margin-top:15px;
+    margin-bottom: 5px;
+    margin-left:25%;
+    height: 40px;
+}
+
+.modal-content .btn input[type="submit"] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    letter-spacing: 0.1rem;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+    text-decoration: none;
+    border: 2px solid var(--maincolor);
+    color:white;
+    border-radius: 5px;
+    background: transparent;
+
+    /* Correct Wierd Button style on iphone */
+    -webkit-appearance: none;
+}
+
+.modal-content .btn input[type="submit"]:hover {
+    background: var(--maincolor);
+    color:black;
+    cursor: pointer;
+}
+
+#error_message, #quote_error_message, #quote_error_message2 {
+    margin-bottom: 10px;
+    background: #f8363d;
+    padding: 0px;
+    text-align: center;
+    font-size: 1em;
+    transition: all 0.5s ease;
+}
+
+.close {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    width: 32px;
+    height: 32px;
+    opacity: 0.3;
+}
+
+.close:hover {
+    opacity: 1;
+}
+
+.close:before,
+.close:after {
+    position: absolute;
+    left: 15px;
+    content: ' ';
+    height: 33px;
+    width: 2px;
+    background-color: var(--maincolor);
+}
+
+/* TODO: Doesnt work */
+.close:before {
+    transform: rotate(45deg);
+}
+
+.close:after {
+    transform: rotate(-45deg);
+}
+
+/* Not sure what this is for */
+.group:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* ///////////////////////////////////////////// */
+/* Responsive */
+/* THE SITE WAS DESIGNED ON A 2K MONITOR */
+/* ///////////////////////////////////////////// */
+@media all and (min-width: 768px) {
+    .container {
+        /* width: 750px; */
+        width:95%;
+    }
+    .col .slidertext{
+        width: 70%;
+    }
+}
+
+@media all and (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+    .col .slidertext{
+        width: 70%;
+    }
+}
+
+@media all and (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+    .col .slidertext{
+        width: 50%;
+    }
+}
+
+/* 2k Desktop Screen Size*/
+@media all and (max-width: 1920px) {
+    ul.nav li a{
+        padding:15px;
+    }
+}
+
+@media all and (max-width: 1200px) {
+    /* Slider Section */
+    /* .section .slider{
+        height:1300px;
+    } */
+    /* AwesomeFont Icon Github*/
+    /* .col l {
+        left:43%;
+    } */
+
+    /* Project Section */
+    .box2{
+        grid-column:6/13;
+    }
+ 
+    .box2left{
+        grid-column:1/8;
+    }
+
+    /* More Project Section */
+    .col .imgholder, .col .imgholderadd.show{
+        height: 355px;
+    }
+
+    .service-tab {
+        font-size: 1.25em;
+    }
+
+    .col .imgholder:hover, .col .imgholderadd:hover {
+        -webkit-transform:none;
+        transform:none;
+    }
+}
+
+/* Ipad/Tablet Screen Size */
+@media all and (max-width: 900px) {
+    .container {
+        width: 95%;
+    }
+
+    .section .slider{
+        height:100vh;
+    }
+
+    .header, .header.small{
+        line-height: 40px;
+        box-shadow: 0px 1px 3px 0px rgba(50, 50, 50, 0.8);
+    }
+
+    .header > .container > #logo, .header.small > .container > #logo {
+        height: 40px;
+    }
+
+    /* .container > h1:not(.hero) {
+        font-size: 4.5em;
+    } */
+
+    /* TODO: decide if i want to change it down to col of 2 instead */
+    /* .col.three {
+        display: block;
+        width: 48%;
+        margin: 1% 1%;
+    } */
+
+    /* h2 {
+        margin: 0% 5% 2.5%;
+    } */
+
+    .header {
+        height: auto;
+        background: #eee;
+    }
+
+    #logo {
+        position: initial;
+        float: none;
+        display: block;
+        transform: none;
+        margin: 5px auto 0 auto;
+        width:50px;
+    }
+
+    ul.nav {
+        float: none;
+        display: block;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    ul.nav li {
+        display: inline-block;
+        /* float: initial; */
+    }
+
+    .responsivegroup {
+        display: block;
+    }
+
+    .responsivegroup:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    .burgernav{
+        display:block;
+    }
+
+    .hold{
+        display:none;
+    }
+
+     /* AwesomeFont Icon Github*/
+    /* .col l {
+        left:43%;
+    } */
+
+    /* More Projects */
+    .col .imgholder, .col .imgholderadd.show{
+        height: 360px;
+    }
+    
+    .col .servicetext{
+        height: 300px;
+        width: 80%;
+        margin-left:10%;
+    }
+    
+    .col .servicetext h1{
+        font-size: 2.5em;
+    }
+
+    .col .servicetext h2{
+        font-size: 1.25em;
+    }
+    
+    .col .servicetext p{
+        font-size: 1em;
+        line-height: 18px;
+    }
+    
+    h2.hero {
+        margin: 5% 0% 10%;
+        font-size: 1.5em;
+    }
+
+    herobutton{
+        font-size:1.5em;
+    }
+
+    /* More Projects section */
+    .col .imgholder .title, .col .imgholderadd .title{
+        font-size: 1.25em;
+        margin-top: 20px;
+        margin-left: 10px;
+    }
+
+    .col .imgholder p, .col .imgholderadd p{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .col .imgholder footer .projecttechlist li, .col .imgholderadd footer .projecttechlist li {
+        margin-left: 10px;
+    }
+
+    .col .imgholder i, .col .imgholderadd i {
+        left: 10px;
+        font-size: 2.5em;
+        margin-bottom: 10px;
+        top: 15px;
+    }
+
+    .col .imgholder j, .col .imgholderadd j {
+        left: 70%;
+
+    }
+
+    .service-tab {
+        font-size: 1.2em;
+    }
+
+    buttonreachout{
+        margin-left: 15%;
+    }
+
+    /* Footer */
+    #logocta.ctalogoholder{
+        margin-left: 46%;
+    }
+}
+
+@media all and (max-width: 700px) {
+    /* Split Section Background */
+    .section.split{
+        background: linear-gradient(to bottom,
+        var(--black) 30%, var(--maincolor) 30% 75%, var(--black) 75%);
+    }
+    
+    /* Skills Section */
+    h2.skillstext{
+        margin-bottom: 20px;
+    }
+
+    p.skillstext{
+        margin-bottom: 20px;
+    }
+
+    /* About Section */
+    .aboutwrapper{
+        grid-template-columns: 1fr;
+        /* grid-template-rows: 1fr; */
+        grid-auto-rows: minmax(350px, auto);
+        margin:2% 2%;
+    }
+    
+    .aboutbox1{
+        grid-column: auto;
+        grid-row: auto;
+        /* width: 75%;
+        margin-left: 12.5%; */
+    }
+    
+    .aboutbox2{
+        grid-column: auto;
+        grid-row: auto;
+        /* width: 75%;
+        margin-left: 12.5%; */
+    }
+    
+    .aboutbox2 h1{
+        margin-top: 20px;
+    }
+
+    .col{
+        display: block;
+        width: 95%;
+        padding: 0;
+        margin: 0 auto;
+    }
+
+    .col.two{
+        display: block;
+        width: 95%;
+        padding: 0;
+        /* margin: 0 auto; */
+        margin: 1% 1%;
+        margin-left: 2.5%;
+    }
+
+    .col.three{
+        display: block;
+        width: 95%;
+        padding: 1%;
+        margin: 4% auto;
+    }
+
+    .col.two{
+        float:none;
+    }
+
+    .col.extrapad {
+        padding: 1%;
+        margin-bottom: 10px;
+    }
+
+    /* Project Section */
+    .serviceswrapper{
+        margin:2% 2%;
+    }
+    
+    .box1{
+        display: none;
+        grid-column:1/8;
+    }
+    
+    .box2{
+        grid-column:1/13;
+    }
+    
+    .box2 p {
+        margin-left: 20px;
+    }
+    
+    .box2 footer ul {
+        justify-content: left;
+    }
+
+    .box1left{
+        display: none;
+    }
+    
+    .box2left{
+        grid-column:1/13;
+    }
+
+    .box2 footer ul{
+        justify-content: left;
+    }
+    
+    .box2 footer li{
+        margin-left: 20px;
+        margin-right: 0px;
+    }
+    
+    .box2left footer li{
+        margin-left: 20px;
+        margin-right: 0px;
+    }
+    
+    /* AwesomeFont Icon Folder*/
+    .box2 k, .box2left k{
+        color:var(--maincolor);
+        margin-left: 20px;
+        margin-bottom: 10px;
+    }
+
+    .serviceswrapper.margin{
+        margin-bottom: 60px;
+    }
+
+    .right, .right > h1, .right > h2, .right > p {
+        text-align: left;
+    }
+
+    #projectimagemobile1{
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/BSImage.jpg");
+        /* background-image: url("../images/BSImage.jpg"); */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    #projectimagemobile1:hover{
+        background-image: url("../images/BSImage.jpg");
+    }
+
+    .box2 .servicetext:hover{
+        opacity: 0;
+    }
+
+    .box2left .servicetext:hover{
+        opacity: 0;
+    }
+  
+    #projectimagemobile2{
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/capturetest.jpg");
+        /* background-image: url("../images/capturetest.jpg"); */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    #projectimagemobile2:hover{
+        background-image: url("../images/capturetest.jpg");
+    }
+    
+    #projectimagemobile3{
+        background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url("../images/SeniorDesignImage.jpg");
+        /* background-image: url("../images/SeniorDesignImage.jpg"); */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    #projectimagemobile3:hover{
+        background-image: url("../images/SeniorDesignImage.jpg");
+    }
+
+    .box2 h1, .box2left h1{
+        margin-left: 20px;
+    }
+    
+    .box2 h3, .box2left h3{
+        margin-left: 20px;
+    }
+
+    .service-tabs-container{
+        width: 25%;
+        margin-left: 39%;
+    }
+
+     /* More Projects */
+     .col .imgholder, .col .imgholderadd.show{
+        height: 250px;
+    }
+
+    /* Call to Action Section */
+    .ctawrapper{
+        display: block;
+        width: 95%;
+        padding: 0;
+        margin: 0 auto;
+        height: 250px;
+    }
+    .col.cta{
+        width: 70%;
+        margin-left: 15%;
+        margin-bottom: 0px;
+    }
+
+    h1.ctatext{
+        margin-bottom: 0px;
+    }
+
+    h3.ctatext{
+        margin-bottom: 0px;
+    }
+
+    buttonreachout{
+        margin-top: 20px;
+        display: flex;
+        flex:1;
+        justify-content: center;
+        align-items: center;
+        margin-left: 0%;
+        /* width:100px; */
+    }
+    /* .col, .col.two{
+        display: block;
+        width: 95%;
+        padding: 0;
+        margin: 0 auto;
+    } */
+
+    .group {
+        display: none;
+    }
+
+    /* Footer */
+    #logocta.ctalogoholder{
+        margin-left: 45%;
+    }
+}
+
+/* Mobile Screen Size */
+@media all and (max-width:450px) {
+    .col{
+        display: block;
+        width: 95%;
+        padding: 0;
+        margin: 0 auto;
+    }
+
+    .col.three, .col.two{
+        float:none;
+    }
+
+    .col.extrapad {
+        padding: 1%;
+        margin-bottom: 10px;
+    }
+
+    .container > h1:not(.hero) {
+        font-size: 3em;
+    }
+
+    h2{
+        font-weight: 300;
+        font-size: 1.2em;
+        margin:1% 1% 10%;
+    }
+
+    .section.black h2, .section.offwhite h2{
+        text-align: left;
+        margin-left: 20px;
+    }
+
+    h2.hero {
+        font-size: 1em;
+        margin-bottom: 30px;
+    }
+
+    .col .slidertext h1{
+        font-size: 3.5em;
+    }
+    
+    .col .slidertext h2{
+        font-size: 1.25em;
+        margin-left: 1%;
+    }
+    
+    .col .slidertext p{
+        font-size: 1.50em;
+    }
+
+    herobutton{
+        font-size:1.25em;
+    }
+
+    /* product section */
+    .col .imgholder, .col .imgholderadd.show{
+        height: 340px;
+    }
+
+    .col .imgholder .title{
+        font-size: 2em;
+    }
+
+    .col .imgholder .fadedbox p{
+        font-size: 1em;
+    }
+
+    .col .imgholderadd .title{
+        font-size: 2em;
+    }
+
+    .col .imgholderadd .fadedbox p{
+        font-size: 1em;
+    }
+
+    .col.three.offwhite{
+        display: block;
+        width: 95%;
+        padding: 0;
+        margin: 5% 1%;
+        height: 300px;
+    }
+
+    h1.hero{
+        font-size: 60px;
+    }
+
+    .col .servicetext{
+        width: 90%;
+        margin-left: 5%;
+    }
+
+    .col .serviceimgholder{
+        height: 250px;
+        width: 90%;
+        margin-left:5%;
+    }
+
+    .service-tabs-container{
+        width: 30%;
+        margin-left: 35%;
+    }
+
+    /* Call to Action Section */
+    .ctawrapper{
+        height: 290px;
+    }
+
+    /* Footer */
+    h2.ctatext{
+        font-size: 1.25em;
+        margin-bottom: 20px;
+    }
+
+    h2.ctatext.bottom{
+        font-size: 1.25em;
+        margin-top: 20px;
+    }
+    
+    h3.ctatext.bottom{
+        font-size: 1em;
+    }
+    
+    #logocta.ctalogoholder{
+        width:70px;
+        margin-left: 41%;
+        margin-top: 0px;
+        margin-bottom: 20px;
+    }
+
+    #social{
+        margin:30px 60px;
+    }
+
+    .smGlobalBtn{
+        width:40px;
+        height:40px;
+        line-height: 1.55em;
+    }
+
+    /* Modal Section */
+    .modal-content {
+        max-width: 300px;
+    }
+
+    .modal-content h2 {
+        font-size: 1.75em;
+    }
+
+    /* AwesomeFont Icons */
+    .modal-content .input_field i{
+        right:45%;
+    }
+
+    form{
+        width: 90%;
+    }
+
+    #error_message, #quote_error_message, #quote_error_message2 {
+        margin-bottom: 5px;
+    }
+}
+
+@media all and (max-width:350px) {
+    .col .slidertext h1{
+        font-size: 3em;
+    }
+    
+    .col .slidertext h2{
+        font-size: 1.25em;
+        margin-left: 1%;
+    }
+    
+    .col .slidertext p{
+        font-size: 1.25em;
+    }
+
+    .col .imgholder, .col .imgholderadd.show{
+        height: 400px;
+    }
+
+    /* Call to Action Section */
+    .ctawrapper{
+        height: 320px;
+    }
+
+    /* Modal Section */
+    .modal-content {
+        max-width: 250px;
+    }
+}

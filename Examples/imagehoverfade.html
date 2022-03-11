@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Title of the document</title>
+    <style>
+        .imagebox {
+            cursor: pointer;
+            height: 300px;
+            position: relative;
+            overflow: hidden;
+            width: 400px;
+            text-align: center;
+            background-color:red;
+        }
+
+        .imagebox .fadedbox {
+            background-color: #666666;
+            position: absolute;
+            top: 0;
+            left: 0;
+            color: #fff;
+            -webkit-transition: all 300ms ease-out;
+            -moz-transition: all 300ms ease-out;
+            -o-transition: all 300ms ease-out;
+            -ms-transition: all 300ms ease-out;
+            transition: all 300ms ease-out;
+            opacity: 0;
+            width: 360px;
+            height: 100px;
+            padding: 130px 20px;
+        }
+
+        .imagebox:hover .fadedbox {
+            opacity: 0.8;
+        }
+
+        .imagebox .text {
+            -webkit-transition: all 300ms ease-out;
+            -moz-transition: all 300ms ease-out;
+            -o-transition: all 300ms ease-out;
+            -ms-transition: all 300ms ease-out;
+            transition: all 300ms ease-out;
+            transform: translateY(30px);
+            -webkit-transform: translateY(30px);
+        }
+
+        .imagebox .title {
+            font-size: 2.5em;
+            text-transform: uppercase;
+            opacity: 0;
+            transition-delay: 0.2s;
+            transition-duration: 0.3s;
+        }
+
+        .imagebox:hover .title,
+        .imagebox:focus .title {
+            opacity: 1;
+            transform: translateY(0px);
+            -webkit-transform: translateY(0px);
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Animated Text Over a Faded Image on Hover</h2>
+    <div class="imagebox">
+        <div class="fadedbox">
+            <div class="title text"> Text Here </div>
+        </div>
+    </div>
+</body>
+
+</html>

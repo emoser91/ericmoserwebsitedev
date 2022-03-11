@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .hold {
+            height: 80px;
+            display: block;
+        }
+
+        .container {
+            position: relative;
+            width: 1170px;
+            margin: 0 auto;
+            color: #444;
+            font-size: 14px;
+            font-weight: 300;
+            font-family: Roboto, 'Open Sans', Arial, sans-serif;
+            overflow: hidden;
+        }
+
+        .header {
+            line-height: 80px;
+            width: 100%;
+            transition: line-height 0.2s linear, box-shadow 0.2s linear;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 100;
+            background: rgba(245, 245, 245, 0.97);
+        }
+
+        .header.small {
+            line-height: 50px;
+            box-shadow: 0px 1px 3px 0px rgba(50, 50, 50, 0.8);
+        }
+
+        .header.small>.container>#logo {
+            height: 40px;
+        }
+
+        #logo {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-image: url("../images/bsp_logo_long.png");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            float: left;
+            height: 41px;
+            width: 210px;
+            margin-left: 5px;
+
+        }
+
+        ul.nav {
+            float: right;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        ul.nav li {
+            float: left;
+            position: relative;
+        }
+
+        ul.nav li a {
+            transition: color 0.2s linear;
+            font-size: 18px;
+            padding: 21px;
+            color: initial;
+            text-decoration: initial;
+        }
+
+        ul.nav li:hover a {
+            color: #2C00C2;
+        }
+
+        button {
+            margin-left: 20px;
+            padding: 9px 25px;
+            background-color: rgba(22, 0, 96, 1);
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease 0s;
+            font-family: 'Roboto Slab', sans-serif;
+            color: white;
+            font-weight: normal;
+            font-size: 18px;
+        }
+
+        button:hover {
+            background-color: rgba(22, 0, 96, 0.8);
+        }
+
+
+
+
+        /* Burger Menu */
+        #hamburger-button {
+            position: relative;
+            z-index: 9999;
+            /*so it never gets lost under something*/
+            display: inline-block;
+            vertical-align: center;
+            height: 15px;
+            width: 20px;
+            margin-left: 5%;
+            margin-top: 5%;
+        }
+
+        #hamburger-button:hover {
+            cursor: pointer;
+            /* changes the cursor to pointer */
+        }
+
+        #hamburger-button>span {
+            display: block;
+            height: 3px;
+            margin-bottom: 3px;
+            width: 20px;
+            background-color: #160060;
+            -webkit-transition-timing-function: linear;
+            /* Safari and Chrome */
+            transition-timing-function: linear;
+            transition-duration: 1s;
+        }
+
+
+        #hamburger-button.open>span:first-child {
+            -webkit-transform: translateY(6px) rotate(45deg);
+            /* Chrome, Safari, Opera */
+            transform: translateY(6px) rotate(45deg);
+        }
+
+
+        #hamburger-button.open>span:nth-child(2) {
+            -webkit-transform: rotateY(90deg);
+            /* Safari */
+            transform: rotateY(90deg);
+            /* rotates the second child on the Y AXIS ONLY 90 degrees so it disappears into a point */
+        }
+
+        #hamburger-button.open>span:last-child {
+            -webkit-transform: translateY(-6px) rotate(-45deg);
+            /* Chrome, Safari, Opera */
+            transform: translateY(-6px) rotate(-45deg);
+        }
+
+
+        .navbar {
+            position: absolute;
+            opacity: .9;
+            z-index: 888;
+            /*so its above the content but below the burger button*/
+            height: 100vh;
+            width: 100vw;
+            left: -100vw;
+            transition: 1s;
+            background-color: lightgray;
+            color: black;
+        }
+
+        .navbar.open {
+            left: 0;
+        }
+
+        .navbar ul {
+            list-style: none;
+            margin-top: 10%;
+            font-size: 1.50em;
+            font-weight: 400;
+            font-family: sans-serif;
+        }
+
+        .navbar ul li {
+            /* border-bottom: 1px solid black; */
+            /* margin-bottom: 10px; */
+            padding: 2px;
+            text-align: center;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: black
+        }
+
+        .navbar ul li :hover {
+            /* text-shadow: 1px 1px 3px #160060; */
+            color: #2C00C2;
+            opacity: 1;
+            cursor: pointer;
+        }
+
+        #logocentered {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            height: 41px;
+            width: 210px;
+
+            background-image: url("../images/bsp_logo_long.png");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .headersmall {
+            line-height: 80px;
+            width: 100%;
+            transition: line-height 0.2s linear, box-shadow 0.2s linear;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 100;
+            background: rgba(245, 245, 245, 0.97);
+            display:none;
+        }
+
+        @media all and (max-width:450px) {
+            .headersmall{
+                display:block;
+            }
+            .hold{
+                display:none;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="hold">
+        <div class="header">
+            <div class="container">
+                <div><a id="logo" href="reveallogo.html"></a></div>
+                <ul class="nav">
+                    <li><a href="aboutus.html">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Request a Quote</a></li>
+                    <li><a class="cta" id="button" href="#"> <button>Contact</button> </a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="headersmall">
+        <div class='navbar'>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutus.html">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Request a Quote</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+
+        <div id="hamburger-button">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div><a id="logocentered" href="reveallogo.html"></a></div>
+    </div>
+
+
+    <script src="scripts/jQuery.js"></script>
+
+    <!-- Makes the height of the nav bar smaller when scrolling -->
+    <script>
+        window.onscroll = function () {
+            var el = document.getElementsByClassName('header')[0];
+            var className = 'small';
+            if (el.classList) {
+                if (window.scrollY > 10)
+                    el.classList.add(className);
+                else
+                    el.classList.remove(className);
+            }
+        };
+    </script>
+
+    <script>
+        function animateHamburger() {
+            $('#hamburger-button').toggleClass('open');
+            /*animation from burger to X*/
+        }
+
+        function slideMenu() {
+            $('.navbar').toggleClass('open');
+            /*animation for slide down menu*/
+        }
+        $('#hamburger-button').click(function () {
+            console.log('trying');
+            animateHamburger();
+            slideMenu(); /*attaching click handler to the burger button*/
+        });
+    </script>
+
+</body>
+
+
+</html>

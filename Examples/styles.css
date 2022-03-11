@@ -1,0 +1,270 @@
+
+/* HEADER */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:500');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /* background-color: #24252A; */
+}
+
+body{
+    background-color:#edf0f1; /*off-white*/
+}
+
+li, a, button{
+    font-family: "Montserrat", sans-serif;
+    font-size: 500;
+    font-size: 16px;
+    color: #edf0f1;
+    text-decoration: none;
+}
+
+header{
+    display:flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 30px 10%;
+    background-color: #24252A;
+    height:80px;
+}
+
+.hold {
+    height: 80px;
+    }
+
+.logoA{
+    cursor: pointer;
+    height: 50px; 
+    width: auto; 
+    max-width: 300px; 
+    max-height: 300px;
+    margin-right:50px;
+}
+
+.logo{
+    cursor: pointer;
+    height: 40px; 
+    width: auto; 
+    max-width: 400px; 
+    max-height: 300px;
+    margin-right:auto;
+}
+
+.nav_links{
+    list-style: none;
+}
+
+.nav_links li{
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.nav_links li a{
+    transition: all 0.3s ease 0;
+}
+
+.nav_links li a:hover{
+    color: #0088a9;
+}
+
+button{
+    margin-left: 20px;
+    padding: 9px 25px;
+    background-color: rgba(0,136,169,1);
+    border:none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+button:hover{
+    background-color: rgba(0,136,169,0.8);
+}
+
+/* Hero Image */
+/* The hero image */
+.hero-image {
+    /* https://www.pexels.com/photo/daylight-environment-forest-idyllic-459225/ */
+    /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url("../images/nature.jpg");
+    /* Set a specific height */
+    height: 500px;
+  
+    /* Position and center the image to scale nicely on all screens */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+  
+  /* Place text in the middle of the image */
+  .hero-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #f4f0ec;
+    font-size: 24px;
+  }
+
+/* RESPONSIVE RULES */
+/* @media screen and (max-width:650px){
+    header{
+        height:250px;
+        background-position: 0 -40px;
+    }
+    header .mobile{
+        display: inline-block;
+    }
+
+    header .desktop{
+        display: none;
+    }
+}
+
+@media screen and (max-width:500px){
+    header{
+        height:200px;
+        background-position: 0 0px;
+    }
+    nav li{
+        margin-right: 0px;
+    }
+} */
+
+/* FEATURES */
+/* .features{
+    background:white;
+    background:gray;
+    padding: 20px;
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+} */
+
+/* .features figure{
+    width: 200px;
+    text-align: center;
+    text-transform: uppercase;
+    margin:auto;
+}
+
+.features figure img{
+    border:1px solid white;
+    border-radius:50%;
+    box-shadow: gray 0px 0px 10px;
+    width: 200px;
+
+} */
+
+
+/* Section 1 */
+.first-section {
+    height: 500px;
+}
+
+
+/* FOOTER */
+
+footer{
+    background: #24252A; 
+    color: gray;
+    font-size: 14px;
+    font-weight: bold;    
+    padding: 20px 20px;
+    text-align: center;
+
+    display:grid;
+    grid-template-columns: 100%;
+    grid-gap:1em;
+    padding:1em;
+}
+
+footnav ul{
+    margin: 0;
+    padding: 0;
+    height:30px;
+    list-style-type: none;
+    border-bottom: 1px dotted gray;
+}
+
+footnav li{
+    text-decoration: none;
+    text-transform: uppercase;
+    display:inline-block;
+    margin-right: 20px;
+    border-radius: 3px;
+    padding: 2px;
+}
+
+footer a{
+    text-decoration: none;
+    color: gray;
+}
+
+footer a:hover{
+    color:white;
+}
+
+
+#social {
+    margin: 20px 10px;
+    text-align: center;
+  }
+  
+.smGlobalBtn { /* global button class */
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    border:1px solid #ddd; /* add border to the buttons */
+    padding: 0px;
+    margin:10px;
+    text-decoration: none;
+    text-align: center;
+    color: #fff;
+    font-size: 25px;
+    font-weight: normal;
+    line-height: 2em;
+    border-radius: 27px;
+    -moz-border-radius:27px;
+    -webkit-border-radius:27px;
+}
+  
+  /* facebook button class*/
+  .facebookBtn{
+      background: #4060A5;
+  }
+  
+  .facebookBtn:before{ /* use :before to add the relevant icons */
+      font-family: "FontAwesome";
+      content: "\f09a"; /* add facebook icon */
+  }
+  
+  .facebookBtn:hover{
+      color: #4060A5;
+      background: #fff;
+      border-color: #4060A5; /* change the border color on mouse hover */
+  }
+  
+  /* linkedin button class*/
+  .linkedinBtn{
+      background: #0094BC;
+  }
+  
+  .linkedinBtn:before{
+        font-family: "FontAwesome";
+        content: "\f0e1"; /* add linkedin icon */
+  }
+  
+  .linkedinBtn:hover{
+        color: #0094BC;
+        background: #fff;
+        border-color: #0094BC;
+  }
+  
+  

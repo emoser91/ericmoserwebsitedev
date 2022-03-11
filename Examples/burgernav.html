@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            /*getting rid of default styling*/
+        }
+
+        h2 {
+            position: relative;
+            z-index: -999;
+            font-family: sans-serif;
+            color: #160060;
+            text-align: center;
+            font-size: 1.5em;
+        }
+
+        h1 {
+            position: relative;
+            z-index: -999;
+            font-family: sans-serif;
+            text-align: center;
+            color: #160060;
+            font-size: 3em;
+            margin-top: 20%;
+        }
+
+        #hamburger-button {
+            position: relative;
+            z-index: 9999;
+            /*so it never gets lost under something*/
+            display: inline-block;
+            vertical-align: top;
+            height: 15px;
+            width: 20px;
+            margin-left: 5%;
+            margin-top: 5%;
+        }
+
+        #hamburger-button:hover {
+            cursor: pointer;
+            /* changes the cursor to pointer */
+        }
+
+        #hamburger-button>span {
+            display: block;
+            height: 3px;
+            margin-bottom: 3px;
+            width: 20px;
+            background-color: #160060;
+            -webkit-transition-timing-function: linear;
+            /* Safari and Chrome */
+            transition-timing-function: linear;
+            transition-duration: 1s;
+        }
+
+
+        #hamburger-button.open>span:first-child {
+            -webkit-transform: translateY(6px) rotate(45deg);
+            /* Chrome, Safari, Opera */
+            transform: translateY(6px) rotate(45deg);
+        }
+
+
+        #hamburger-button.open>span:nth-child(2) {
+            -webkit-transform: rotateY(90deg);
+            /* Safari */
+            transform: rotateY(90deg);
+            /* rotates the second child on the Y AXIS ONLY 90 degrees so it disappears into a point */
+        }
+
+        #hamburger-button.open>span:last-child {
+            -webkit-transform: translateY(-6px) rotate(-45deg);
+            /* Chrome, Safari, Opera */
+            transform: translateY(-6px) rotate(-45deg);
+        }
+
+
+        .navbar {
+            position: absolute;
+            opacity: .9;
+            z-index: 888;
+            /*so its above the content but below the burger button*/
+            height: 100vh;
+            width: 30vw;
+            left: -30vw;
+            transition: 1s;
+            background-color: lightgray;
+            color: black;
+        }
+
+        .navbar.open {
+            left: 0;
+        }
+
+        .navbar ul {
+            list-style: none;
+            margin-top: 40%;
+            font-size: 1.50em;
+            font-weight: 400;
+            font-family: sans-serif;
+        }
+
+        .navbar ul li {
+            /* border-bottom: 1px solid black; */
+            /* margin-bottom: 10px; */
+            padding: 10px;
+            text-align: center;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color:black
+        }
+
+        .navbar ul li :hover {
+            /* text-shadow: 1px 1px 3px #160060; */
+            color: #2C00C2;
+            opacity: 1;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class='navbar'>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="aboutus.html">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Request a Quote</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+
+    <div id="hamburger-button">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <h1>BURGER NAV DEMO</h1>
+    <h2>slide from left + burger to X</h2>
+
+
+    <script src="scripts/jQuery.js"></script>
+
+    <script>
+        function animateHamburger() {
+            $('#hamburger-button').toggleClass('open');
+            /*animation from burger to X*/
+        }
+
+        function slideMenu() {
+            $('.navbar').toggleClass('open');
+            /*animation for slide down menu*/
+        }
+        $('#hamburger-button').click(function () {
+            console.log('trying');
+            animateHamburger();
+            slideMenu(); /*attaching click handler to the burger button*/
+        });
+    </script>
+</body>
+
+</html>

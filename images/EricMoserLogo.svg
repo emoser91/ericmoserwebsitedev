@@ -1,0 +1,37 @@
+<svg width="90" height="90" viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="EricMoserLogo">
+<rect id="Rectangle 327" x="13" y="12" width="65" height="65" fill="#161616"/>
+<line id="Line 95" x1="13.5" y1="12" x2="13.5" y2="77" stroke="#05B36A"/>
+<line id="Line 96" x1="13" y1="76.5" x2="78" y2="76.5" stroke="#05B36A"/>
+<line id="Line 97" x1="78.5" y1="12" x2="78.5" y2="77" stroke="#05B36A"/>
+<line id="Line 98" x1="78" y1="12.5" x2="13" y2="12.5" stroke="#05B36A"/>
+<path id="Rectangle 332" d="M20 2.5C20 1.11929 21.1193 0 22.5 0V0C23.8807 0 25 1.11929 25 2.5V12H20V2.5Z" fill="#05B36A"/>
+<path id="Rectangle 333" d="M20 87.5C20 88.8807 21.1193 90 22.5 90V90C23.8807 90 25 88.8807 25 87.5V77H20V87.5Z" fill="#05B36A"/>
+<path id="Rectangle 334" d="M66 87.5C66 88.8807 67.1193 90 68.5 90V90C69.8807 90 71 88.8807 71 87.5V77H66V87.5Z" fill="#05B36A"/>
+<path id="Rectangle 335" d="M54 87.5C54 88.8807 55.1193 90 56.5 90V90C57.8807 90 59 88.8807 59 87.5V77H54V87.5Z" fill="#05B36A"/>
+<path id="Rectangle 336" d="M43 87.5C43 88.8807 44.1193 90 45.5 90V90C46.8807 90 48 88.8807 48 87.5V77H43V87.5Z" fill="#05B36A"/>
+<path id="Rectangle 337" d="M31 87.5C31 88.8807 32.1193 90 33.5 90V90C34.8807 90 36 88.8807 36 87.5V77H31V87.5Z" fill="#05B36A"/>
+<path id="Rectangle 338" d="M78 20H87.5C88.8807 20 90 21.1193 90 22.5V22.5C90 23.8807 88.8807 25 87.5 25H78V20Z" fill="#05B36A"/>
+<path id="Rectangle 339" d="M13 20H2.5C1.11929 20 0 21.1193 0 22.5V22.5C0 23.8807 1.11929 25 2.5 25H13V20Z" fill="#05B36A"/>
+<path id="Rectangle 340" d="M13 65H2.5C1.11929 65 0 66.1193 0 67.5V67.5C0 68.8807 1.11929 70 2.5 70H13V65Z" fill="#05B36A"/>
+<path id="Rectangle 341" d="M13 54H2.5C1.11929 54 0 55.1193 0 56.5V56.5C0 57.8807 1.11929 59 2.5 59H13V54Z" fill="#05B36A"/>
+<path id="Rectangle 342" d="M13 42H2.5C1.11929 42 0 43.1193 0 44.5V44.5C0 45.8807 1.11929 47 2.5 47H13V42Z" fill="#05B36A"/>
+<path id="Rectangle 343" d="M13 31H2.5C1.11929 31 0 32.1193 0 33.5V33.5C0 34.8807 1.11929 36 2.5 36H13V31Z" fill="#05B36A"/>
+<path id="Rectangle 344" d="M78 65H87.5C88.8807 65 90 66.1193 90 67.5V67.5C90 68.8807 88.8807 70 87.5 70H78V65Z" fill="#05B36A"/>
+<path id="Rectangle 345" d="M78 54H87.5C88.8807 54 90 55.1193 90 56.5V56.5C90 57.8807 88.8807 59 87.5 59H78V54Z" fill="#05B36A"/>
+<path id="Rectangle 346" d="M78 42H87.5C88.8807 42 90 43.1193 90 44.5V44.5C90 45.8807 88.8807 47 87.5 47H78V42Z" fill="#05B36A"/>
+<path id="Rectangle 347" d="M78 31H87.5C88.8807 31 90 32.1193 90 33.5V33.5C90 34.8807 88.8807 36 87.5 36H78V31Z" fill="#05B36A"/>
+<path id="Rectangle 348" d="M66 2.5C66 1.11929 67.1193 0 68.5 0V0C69.8807 0 71 1.11929 71 2.5V12H66V2.5Z" fill="#05B36A"/>
+<path id="Rectangle 349" d="M54 2.5C54 1.11929 55.1193 0 56.5 0V0C57.8807 0 59 1.11929 59 2.5V12H54V2.5Z" fill="#05B36A"/>
+<path id="Rectangle 350" d="M43 2.5C43 1.11929 44.1193 0 45.5 0V0C46.8807 0 48 1.11929 48 2.5V12H43V2.5Z" fill="#05B36A"/>
+<path id="Rectangle 351" d="M31 2.5C31 1.11929 32.1193 0 33.5 0V0C34.8807 0 36 1.11929 36 2.5V12H31V2.5Z" fill="#05B36A"/>
+<line id="Line 99" x1="78.5" y1="12" x2="78.5" y2="77" stroke="#05B36A"/>
+<rect id="image 29" x="20" y="30" width="51" height="29" fill="url(#pattern0)"/>
+</g>
+<defs>
+<pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image0_42_98" transform="translate(-0.0156198) scale(0.00963775 0.0169492)"/>
+</pattern>
+<image id="image0_42_98" data-name="image.png" width="107" height="59" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGsAAAA7CAYAAAB8MXT7AAAAAXNSR0IArs4c6QAABRJJREFUeJztmzFsE1cYx///dzYk+EzFwMCShaULlapuEQNbttKJNFQMoFZ0oKpaqETAhiNOAqi0VB1IN6pGaho2xk5FHdiiSu3CwsLCUFVUyTm4wb5/h2BBEhPfO985se79xuR97/vkn+/57r3vWI6qwi5EQDM0tWK3ceWo8i/At7rOx+jDkDOL6VSXLr4qxyj+1m2c6UcxuwGKc74mD+50HVtQsB/Cz3GG5kYWwANQYX6nq9iMHzXvEDwUZ2yOZAEExsqqfLLTdbQp68pxkh/FHZ8rWQAA4faQro7sdBm+Jg9C0V2bmPzJAktFtRYgcEfLUGEe4AGbkBzKAgCOllD5cqeyl1U9Q2DMNi6nsgCKs2UFb/c775CujkD6PklsfmUBe6TWPSgo9C2pwKJaCwBLScJzKwsACBzxo1a1X/lKqH4OcDRpfK5lAQCIyj5V38s6zV5VDlO42cscuZdFwHjSIhTsySyJAlMUFwn0lMN6vY6oMQJrvSSNh6Lsc7ThYT9q3QyBL7KY3UezSrDnq5e2G7kr9IbBoNFr4rSIu5HbDUFqUUefc+ZhGnW1KenSO5S3xAQXxmZyvwy2IUhPZgG6kOhOrSMK9lDeYhqiACdrAwRGytFwomegTpSj1nUCqT3LOVmbIc6UdMV6d2Ezw7o8KirV30AnqwNUNA9dtNq324AulDyZBYKp7j86WR0geNBX0WpH/HX8aPg7Aqnv7DtZb4DA8ZKqJ23jSroyRuLjLGpysrbBCHP7dCnWKS4AQBcPUFFmp9FO1vbsNzKx+iMAwFfxLsHM+jycrC4QPOar+mm3cSVdniBwPMtanKw4dGkF2KdLh4zMD1mXYf1kXVbrOaJsTxXi9gwmmltaJDluE0NgqKjWQkM4CmLL9tzLpXK/dS3AHwTejTs+d1dW0xQuAnpsH8nRMqpfbf6rr8pZgsdsZxPQAHHKJiZ3sgyw1iLHBVjv6kuovd4KMKSrIxS+SVQIcT6EZ/WlyZ0sAFhlbQnSjG3chlaAHo7oBT0IWbtjG9e//oNdRmgKU75aHxA4YhO33grQDGiqywCSHNEvR4ysH7aBnF5ZAAAGTdI7oSQHqeSkpKkkaUWcXeXs0ySx+ZUFYIXBI1EV2zgChuBe2zgJ90LWfrGNa5NrWQBQx/QtQKmeDndC0NPQeD312edeFgi9oDchINtWBeIkGCz3MoWTBaDBa09AZdZOLWku5PSDXudxsl4ScnpOUM8f6Fb0ODSFVL4Iu7QVrZ9taK+IGJ305D1Cgq2jTgiIInI8rW4wa1l1FH7fTa1oabLK2aclXT5nZH5KZULp+qqZXkplLrhlcAt1zswLuN/rPAL+Ck0hSKOmNk5WB0K+OA3oWdJ4AWukdwIMmmnW5WR1gjeegeZ00nARkysMHqVZEuBkvZEVTt2HlKCfQg/rqN1OvyIna1tWTOGcIIt9PNVf0JvodECZBk7WdjBYBhF7hzwizzV47UlW5ThZXQg5/UBC17MnAffrrP2YZS1OVgxC453frhVA0N/rd5DZ4mTFgUFjvRVAHX+LRHMKvJH4Vj8uTlZMVllbovj1ln9Id+uc+rUfNezKVjQg23a0pKwYr+qr9X77nSsBT0LT+Kxf+d2VZQODNbE1LqC5/lprNAHeqvcrvZNlSZ2zf4KaovBt2u8fdyO33U29EKIwA/NP35doJysJDCIA//U7rVsGBwgna4BwsgYIJ2uAcLIGCCdrgHCyBoj/AafjuJyniWh9AAAAAElFTkSuQmCC"/>
+</defs>
+</svg>

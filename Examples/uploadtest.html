@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brookstone Printing</title>
+    <!-- Including the bootstrap css screws up a lot of my page -->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" /> -->
+    <link rel="stylesheet" href="styles/dropzone.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles/upload.css">
+    <link rel="icon" type="image/png" href="/favicon.png"/>
+
+</head>
+
+<body>
+    <div class="hold">
+        <div class="header">
+            <div class="container" id="box">
+                <div><a id="logo" href="index.html"></a></div>
+                <ul class="nav">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="aboutus.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="ftp.html">Upload</a></li>
+                    <li><a href="quote.html">Quote</a></li>
+                    <li><a class="cta" id="button" href="#"> <button>Contact</button> </a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="burgernav">
+        <div class='navbar'>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutus.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="ftp.html">Upload</a></li>
+                <li><a href="quote.html">Quote</a></li>
+                <li><a id="burgcontactbnt" href="#">Contact</a></li>
+            </ul>
+        </div>
+
+        <div id="hamburger-button">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div><a id="logocentered" href="index.html"></a></div>
+    </div>
+
+    <div class="section">
+        <div class="slider">
+            <div class="container slidercontent"></div>
+        </div>
+    </div>
+
+    <div class="section black" id="ftpsection">
+        <div class="container">
+
+            <h1>File Sharing <br> and Requirements</h1>
+            <h2 class="text white">Brookstone Printing has the following requirements and procedures when it comes to sharing your artwork with us.
+                Please keep in mind that PDF files up to 10Mb can be emailed to artwork@brookstoneprinting.com and larger files can be sent with Dropbox 
+                or our own FTP.
+            </h2>
+
+            <div class="col three">
+                <h1 class="icon" id="icondesign"></h1>
+                <h1 class="servicetext">Platform Requirements</h1>
+                <p>Acceptable files and job requirements for Brookstone Printing:</p>
+                <ul>
+                    <li>Quark (12.2.3.0 or lower)</li>
+                    <li>InDesign (CC)</li>
+                    <li>Adobe Illustrator/Vector files (CC)</li>
+                    <li>Press-Quality PDF with a minimum of .125” bleeds (if it includes bleeds).
+                        CMYK, fonts outlined or embedded, 300dpi or higher for any raster images.</li>
+                    <li>PSD, TIF or JPEG are acceptable, but we do not guarantee any text/copy created in these
+                        formats will
+                        print clearly at print-resolution. Please use 1200dpi for any bitmaps to ensure highest
+                        quality output.</li>
+                    <li>For any Microsoft Office files (Word, Publisher, Etc.), please convert to a CMYK,
+                        Press-Quality PDF with
+                        bleeds (if applicable) and send the native file along for reference.</li>
+                </ul>
+            </div>
+
+            <div class="col three">
+                <h1 class="icon" id="iconprinting"></h1>
+                <h1 class="servicetext">Artwork Requirements</h1>
+                <p>Artwork sent to Brookstone Printing needs to conform to the following:</p>
+                <ul>
+                    <li>All fonts must be outlined, embedded or included</li>
+                    <li>All links must be embedded or included</li>
+                    <li>All images must print at 300dpi or higher</li>
+                    <li>CMYK, Spot or Grayscale only - No RGB</li>
+                    <li>A minimum of .125” bleed must be included on any job that requires a bleed</li>
+                    <li>Native files must be packaged (to include fonts and links)</li>
+                    <li>A reference PDF must be included with all packaged native files</li>
+                </ul>
+                <p>* Additional fees may apply if supplied art must be converted or altered beyond the previously
+                    outlined job/quote specifications.</p>
+            </div>
+
+            <div class="col three">
+                <h1 class="icon" id="iconfinishing"></h1>
+                <h1 class="servicetext">File Transfer Procedure</h1>
+                <p>Brookstone Printing procedure for FTP file transfer:</p>
+                <p></p>
+                <p>Brookstone Printing has FTP and Dropbox accounts for easy file sharing. To send files via FTP, you
+                    must have FTP client software such as CyberDuck, FileZilla
+                    or Transmit.
+                    Additionally, you will need our FTP Settings (shown below) in order to connect to our server.
+                    After
+                    uploading, please send an email to artwork@brookstoneprinting.com with the file name and Company
+                    name
+                    after the upload is complete.</p>
+                <p>Contact the art department if you need any additional assistance in the file transfer process.</p>
+                <p>Once the art/prepress department
+                    receives the file(s) a preflight will be
+                    performed and you will be contacted
+                    if there are any items that need to be
+                    changed before proofing or printing.</p>
+            </div>
+
+            <h1>Manual <br> File Upload</h1>
+            <h2 class="text white">Brookstone Printing has the following requirements and procedures when it comes to sharing your artwork with us.
+                Please keep in mind that PDF files up to 10Mb can be emailed to artwork@brookstoneprinting.com and larger files can be sent with Dropbox 
+                or our own FTP or.
+            </h2>
+
+            <div class="col two">
+                <h1 class="servicetext">FTP Client Software</h1>
+                <p>The following links can be used to download FTP software:</p>
+                <p> Be careful to download the "client" version of the software that you intend to use.</p>
+                <ul>
+                    <li><a href="https://filezilla-project.org/" target="_blank">FileZilla:
+                            https://filezilla-project.org/</a></li>
+                    <li><a href="https://cyberduck.io/" target="_blank">CyberDuck: https://cyberduck.io/</a></li>
+                    <li><a href="https://winscp.net/eng/index.php" target="_blank">WinSCP:
+                            https://winscp.net/eng/index.php</a></li>
+
+                </ul>
+                <p>*The example image is taken from a FileZilla connection and other software might have a different
+                    layout.</p>
+            </div>
+
+            <div class="col two">
+                <div class="imgholder" id="serviceimage1"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="section black" id="ftpsection">
+        <div class="container">
+            <h1>Drag and Drop<br> File Upload</h1>
+            <h2 class="text white">Drag and Drop all files into the box provided and then click "Upload" to upload your files to Brookstone Printing's
+                Server. Keep in mind that only files with the extensions ".png, .jpg, .gif, .bmp, .jpeg, .pdf, .zip, .ai" are accepted through this process. After uploading,
+                please send a courtesy email to artwork@brookstoneprinting.com to confirm that the files uploaded meet the Art Team's requirements. If you
+                require additional assistance with the upload process please email the Art Team at the above address. 
+            </h2>
+
+            <!-- <form action="uploadtest.php" class="dropzone" id="dropzoneFrom"></form>
+                <div class="input_field">
+                    <input type="text" name="firstname" placeholder="firstname" id="firstname">
+                </div>
+                <div class="input_field">
+                    <input type="text" name="lastname" placeholder="lastname" id="lastname">
+                </div>
+                <buttonupload type="button" class="btn btn-info" id="submit-all">Upload</buttonupload>
+            </form> -->
+
+
+            <!-- This works!! -->
+            <!-- <form name="uploadform" action="uploadtest.php" enctype="multipart/form-data" method="POST">
+                <div class="input_field">
+                    <input type="text" name="firstname" placeholder="firstname" id="firstname">
+                </div>
+                <div class="input_field">
+                    <input type="text" name="lastname" placeholder="lastname" id="lastname">
+                </div>
+                <div class="dropzone" id="dropzoneFrom"></div>
+                <br /><br /><buttonupload type="submit" class="btn btn-info" id="submit-all">Upload</buttonupload> 
+            </form> -->
+
+            <form method="post" action="upload.php" class="dropzone" id="mydropzone" name="uploadform" enctype='multipart/form-data'> 
+                <!-- remember we gave an id mydropzone to the form          -->
+                <label>Username:<input type="text" name="uname"/> </label>
+                <label>Password:<input type="text" name="pass"/> </label>
+                <!-- this will the dropzone drag and drop section. -->
+                <!-- notice we have given it an id dropzonePreview. -->
+                <div id="dropzonePreview"></div>
+                <input type="button" id="sbmtbtn" value="submit"/>
+                <!-- we have given id sbmtbtn to the button    -->
+            </form>
+
+            <!-- <form method="post" action="uploadtest.php" class="dropzone" id="mydropzone" enctype='multipart/form-data'>
+                <h4>Personal Information</h4>  
+                <input type="text" name="name" placeholder="Company/Name"/>
+                <input type="text" name="email" placeholder="Email"/>
+                <input type="text" name="salesrep" placeholder="Sales Rep."/>
+                <div id="dropzonePreview"></div>
+                <br /><br /><buttonupload type="submit" class="btn btn-info" id="sbmtbtn">Upload</buttonupload> 
+            </form> -->
+
+
+
+
+
+
+        </div>
+    </div>
+
+    <div class="section black">
+        <div class="container">
+        </div>
+    </div>
+
+    <div class="section calltoaction">
+        <div class="container">
+            <h1>Start A Project!</h1>
+            <h2>Reach out and contact us with a question or idea. Together let's make your print vision a reality!</h2>
+            <div class="ctawrapper">
+                <div class="col cta">
+                    <a class="cta" id="buttonbottomcontact" href="#">
+                        <buttonreachout>Contact</buttonreachout>
+                    </a>
+                </div>
+                <div class="col cta">
+                    <a class="cta" id="buttonbottomquote" href="quote.html">
+                        <buttonreachout>Quote</buttonreachout>
+                    </a>
+                </div>
+            </div>
+
+            <div class="group"></div>
+        </div>
+    </div>
+
+    <footer id="Footer">
+        <footnav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutus.html">About</a></li>
+                <li><a href="services.html">Services</a> </li>
+                <li><a href="faq.html">FAQ</a> </li>
+                <li><a href="ftp.html">Upload</a></li>
+                <li><a href="quote.html">Quote</a> </li>
+            </ul>
+        </footnav>
+        <div id="social">
+            <a class="facebookBtn smGlobalBtn" href="https://www.facebook.com/" target="_blank"></a>
+            <a class="linkedinBtn smGlobalBtn" href="https://www.linkedin.com/" target="_blank"></a>
+        </div>
+        <div id=reachout>
+            <p>Centrally located in Kenosha, Wisconsin.</p>
+            <p>We work with clients from all over the country.</p>
+            <p>Contact us with your question, quote or design project!</p>
+        </div>
+        <div id=contacts>
+            <p>info@brookstoneprinting.com &nbsp; &nbsp; (262) 255-3130 &nbsp; &nbsp; 7325 30th Ave, Kenosha, WI 53142
+            </p>
+        </div>
+        <div id=contactsmobile>
+            <p>(262) 255-3130</p>
+            <p>info@brookstoneprinting.com </p>
+            <p>7325 30th Ave, Kenosha, WI 53142</p>
+        </div>
+        <div id=copyright>
+            <p>©2020. All Rights Reserved | Brookstone Printing</p>
+        </div>
+    </footer>
+
+    <!-- Modal Section -->
+    <div class="bg-modal">
+        <div class="modal-content">
+            <a href="#" class="close"></a>
+            <h2>Contact us</h2>
+            <div id="error_message">
+
+            </div>
+            <!-- <form action="" id="myform" onsubmit="return validate();"> -->
+            <form action="scripts/contact.php" method="post" id="myform">
+                <div class="input_field">
+                    <input type="text" name="name" placeholder="Name" id="name">
+                </div>
+                <div class="input_field">
+                    <input type="text" name="subject" placeholder="Subject" id="subject">
+                </div>
+                <div class="input_field">
+                    <input type="text" name="phone" placeholder="Phone" id="phone">
+                </div>
+                <div class="input_field">
+                    <input type="text" name="email" placeholder="Email" id="email">
+                </div>
+                <div class="input_field">
+                    <textarea placeholder="Message" name="message" id="message"></textarea>
+                </div>
+                <div class="g-recaptcha" data-sitekey="6LfRILEZAAAAACLNnsof8sHLiB-sKg6Qi0ZA3Nj4"></div>
+                <div class="btn">
+                    <input type="submit" name="submit">
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+    
+    <script src="scripts/jQuery.js"></script>
+
+    <!-- FB and LinkedIn Icons -->
+    <script src="https://use.fontawesome.com/1744f3f671.js"></script>
+
+
+    <!-- Hamburger Menu -->
+    <script>
+        function animateHamburger() {
+            $('#hamburger-button').toggleClass('open');
+            /*animation from burger to X*/
+        }
+
+        function slideMenu() {
+            $('.navbar').toggleClass('open');
+            /*animation for slide down menu*/
+        }
+
+        function scrollLock() {
+            // When the modal is shown, we want a fixed body
+            if (document.body.style.position == '') {
+                document.body.style.position = 'fixed';
+                // document.body.style.top = `-${window.scrollY}px`;
+                // console.log('fixed');
+            }
+            //When the modal is hidden, we want to remain at the top of the scroll position
+            else {
+                // console.log('scroll');
+                const scrollY = document.body.style.top;
+                document.body.style.position = '';
+                // document.body.style.top = '';
+                // window.scrollTo(0, parseInt(scrollY || '0') * -1);
+            }
+        }
+
+        $('#hamburger-button').click(function () {
+            console.log('trying');
+            animateHamburger();
+            slideMenu(); /*attaching click handler to the burger button*/
+            //scrollLock(); //TODO: stop from scrolling to top when opening
+        });
+
+    </script>
+
+    <!-- Action to bring up and down the contact modal pop up -->
+    <script>
+        document.getElementById('button').addEventListener("click", function () {
+            document.querySelector('.bg-modal').style.display = "flex";
+        });
+
+        document.getElementById('burgcontactbnt').addEventListener("click", function () {
+            animateHamburger();
+            slideMenu();
+            document.querySelector('.bg-modal').style.display = "flex";
+        });
+
+        document.getElementById('buttonbottomcontact').addEventListener("click", function () {
+            document.querySelector('.bg-modal').style.display = "flex";
+        });
+
+        document.querySelector('.close').addEventListener("click", function () {
+            document.querySelector('.bg-modal').style.display = "none";
+        });
+    </script>
+
+    <!-- Rules for contact modal popup before submit button will work -->
+    <!-- <script>
+            function validate() {
+                var name = document.getElementById("name").value;
+                var subject = document.getElementById("subject").value;
+                var phone = document.getElementById("phone").value;
+                var email = document.getElementById("email").value;
+                var message = document.getElementById("message").value;
+                var error_message = document.getElementById("error_message");
+
+                error_message.style.padding = "10px";
+
+                var text;
+
+                if (name.length < 4) {
+                    text = "Please Enter valid Name";
+                    error_message.innerHTML = text;
+                    return false;
+                }
+                if (subject.length < 5) {
+                    text = "Please Enter Subject";
+                    error_message.innerHTML = text;
+                    return false;
+                }
+                if (isNaN(phone) || phone.length != 10) {
+                    text = "Please Enter valid Phone Number";
+                    error_message.innerHTML = text;
+                    return false;
+                }
+                if (email.indexOf("@") == -1 || email.length < 6) {
+                    text = "Please Enter valid Email";
+                    error_message.innerHTML = text;
+                    return false;
+                }
+                if (message.length <= 1) {
+                    text = "Please Enter Message";
+                    error_message.innerHTML = text;
+                    return false;
+                }
+                alert("Form Submitted Successfully!");
+                return true;
+            }
+        </script> -->
+
+    <!-- Makes the height of the nav bar smaller when scrolling -->
+    <script>
+        window.onscroll = function () {
+            var el = document.getElementsByClassName('header')[0];
+            var className = 'small';
+            if (el.classList) {
+                if (window.scrollY > 10)
+                    el.classList.add(className);
+                else
+                    el.classList.remove(className);
+            }
+
+            var el = document.getElementsByClassName('burgernav')[0];
+            var className = 'small';
+            if (el.classList) {
+                if (window.scrollY > 10)
+                    el.classList.add(className);
+                else
+                    el.classList.remove(className);
+            }
+        };
+    </script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="scripts/dropzone.js"></script>
+    <script>
+
+        // Dropzone.options.myDropzone= {
+        // url: 'uploadtest.php',
+        // autoProcessQueue: false,
+        // uploadMultiple: true,
+        // parallelUploads: 5,
+        // maxFiles: 5,
+        // maxFilesize: 1,
+        // acceptedFiles:".png,.jpg,.gif,.bmp,.jpeg,.pdf,.zip,.ai",
+        // addRemoveLinks: true,
+        // init: function() {
+        //     dzClosure = this; // Makes sure that 'this' is understood inside the functions below.
+
+        //     // for Dropzone to process the queue (instead of default form behavior):
+        //     document.getElementById("submit-all").addEventListener("click", function(e) {
+        //     // Make sure that the form isn't actually being sent.
+        //         e.preventDefault();
+        //         e.stopPropagation();
+        //         dzClosure.processQueue();
+        //     });
+
+        //     //send all the form data along with the files:
+        //     this.on("sendingmultiple", function(data, xhr, formData) {
+        //         formData.append("firstname", jQuery("#firstname").val());
+        //         formData.append("lastname", jQuery("#lastname").val());
+        //     });
+        // }
+        // }   
+
+// Validation on the form before processing
+//         init: function() {
+//     dzClosure = this; // Makes sure that 'this' is understood inside the functions below.
+
+//     document.getElementById("submit-all").addEventListener("click", function(e) {
+//         e.preventDefault();
+//         e.stopPropagation();
+
+//         var validFirstName = document.getElementById("firstname").checkValidity();
+//         var validLastName = document.getElementById("lastname").checkValidity();
+
+//         if (!validFirstName || !validLastName) {
+//             // Here you can handle the empty input case, color the inputs red or whatever
+//             return false;
+
+//         } else {
+//             dzClosure.processQueue();
+//         }
+//     });
+
+// }
+
+  
+    // Dropzone.options.dropzoneFrom = {
+    //     url: 'uploadtest.php',
+    //     autoProcessQueue: false,
+    //     parallelUploads: 10,
+    //     acceptedFiles:".png,.jpg,.gif,.bmp,.jpeg,.pdf,.zip,.ai",
+    //     init: function()
+    //     {
+    //         var submitButton = document.querySelector('#submit-all');
+    //         myDropzone = this;
+
+    //         submitButton.addEventListener("click", function(){
+    //             myDropzone.processQueue();
+    //         });
+
+    //         //send all the form data along with the files:
+    //         this.on("sendingmultiple", function(data, xhr, formData) {
+    //             formData.append("firstname", jQuery("#firstname").val());
+    //             formData.append("lastname", jQuery("#lastname").val());
+    //         });
+
+    //         // Clear out files in window after processing
+    //         this.on("complete", function(){
+    //             if(this.getQueuedFiles().length == 0 && this.getUploadingFiles().length == 0)
+    //             {
+    //                 var _this = this;
+    //                 _this.removeAllFiles();
+    //             }
+    //             document.uploadform.reset();
+    //         });
+    //     },
+    // };
+
+    Dropzone.options.mydropzone = {
+    //url does not has to be written 
+    //if we have wrote action in the form 
+    //tag but i have mentioned here just for convenience sake 
+        // url: 'uploadtest.php', 
+        parallelUploads: 10,
+        maxFiles: 10,
+        acceptedFiles:".png,.jpg,.gif,.bmp,.jpeg,.pdf,.zip,.ai",
+        addRemoveLinks: true,
+        autoProcessQueue: false, // this is important as you dont want form to be submitted unless you have clicked the submit button
+        autoDiscover: false,
+        previewsContainer: '#dropzonePreview', // we specify on which div id we must show the files
+        clickable: true, // this tells that the dropzone will not be clickable . we have to do it because v dont want the whole form to be clickable 
+        accept: function(file, done) {
+            console.log("uploaded");
+            done();
+        },
+        error: function(file, msg){
+            alert(msg);
+        },
+        init: function() {
+            var myDropzone = this;
+            //now we will submit the form when the button is clicked
+            $("#sbmtbtn").on('click',function(e) {
+               e.preventDefault();
+               myDropzone.processQueue(); // this will submit your form to the specified action path
+              // after this, your whole form will get submitted with all the inputs + your files and the php code will remain as usual 
+              //REMEMBER you DON'T have to call ajax or anything by yourself, dropzone will take care of that
+            });
+            // this.on("complete", function(){
+            //     if(this.getQueuedFiles().length == 0 && this.getUploadingFiles().length == 0)
+            //     {
+            //         var _this = this;
+            //         _this.removeAllFiles();
+            //     }
+            //     document.uploadform.reset();
+                // alert("File Upload Complete!");
+            // }); 
+        } // init end
+        
+    };
+
+    </script>
+
+</body>
+
+
+</html>

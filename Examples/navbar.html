@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nav Bar</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Montserrat:500');
+
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            /* background-color: #24252A; */
+        }
+
+        body{
+            background-color:#edf0f1; /*off-white*/
+        }
+
+        li, a, button{
+            font-family: "Montserrat", sans-serif;
+            font-size: 500;
+            font-size: 16px;
+            color: #edf0f1;
+            text-decoration: none;
+        }
+
+        header{
+            display:flex;
+            justify-content: flex-end;
+            align-items: center;
+            padding: 30px 10%;
+            background-color: #24252A;
+            height:80px;
+        }
+
+        .logoA{
+            cursor: pointer;
+            height: 50px; 
+            width: auto; 
+            max-width: 300px; 
+            max-height: 300px;
+            margin-right:50px;
+        }
+
+        .logo{
+            cursor: pointer;
+            height: 40px; 
+            width: auto; 
+            max-width: 400px; 
+            max-height: 300px;
+            margin-right:auto;
+        }
+
+        .nav_links{
+            list-style: none;
+        }
+
+        .nav_links li{
+            display: inline-block;
+            padding: 0px 20px;
+        }
+
+        .nav_links li a{
+            transition: all 0.3s ease 0;
+        }
+
+        .nav_links li a:hover{
+            color: #0088a9;
+        }
+
+        button{
+            margin-left: 20px;
+            padding: 9px 25px;
+            background-color: rgba(0,136,169,1);
+            border:none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease 0s;
+        }
+
+        button:hover{
+            background-color: rgba(0,136,169,0.8);
+        }
+
+        /* Hero Image */
+/* The hero image */
+.hero-image {
+    /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url("../images/nature.jpg");
+    /* Set a specific height */
+    height: 500px;
+  
+    /* Position and center the image to scale nicely on all screens */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+  
+  /* Place text in the middle of the image */
+  .hero-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #f4f0ec;
+    font-size: 24px;
+  }
+
+    </style>
+</head>
+<body>
+    <header>
+        <img class="logoA" src="../images/brookstone-logo.png" alt="logo">
+        <img class="logo" src="../images/brookstone-logo_text.png" alt="logo">
+        <!-- <img class="logo" src="../images/logotext.png" alt="logo"> -->
+        <nav>
+            <ul class="nav_links" >
+                <li><a href="#">Services</a> </li>
+                <li><a href="#">FAQ</a> </li>
+                <li><a href="#">Request a Quote</a> </li>
+                <li><a href="#">About</a> </li>
+            </ul>
+        </nav>
+        <a class="cta" href="#"> <button>Contact</button> </a>
+    </header>
+
+    <div class="hero-image">
+        <div class="hero-text">
+        <h1>Brookstone Printing</h1>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,80 @@
+/* ///////////////////////////////////////////// */
+/* Header Desktop */
+/* ///////////////////////////////////////////// */
+.header {
+    line-height: 60px;
+    background: rgba(30, 30, 30, 0.95);
+}
+
+.section .slider{
+    height:120px;
+}
+
+/* ///////////////////////////////////////////// */
+/* Burger Menu */
+/* ///////////////////////////////////////////// */
+.burgernav {
+    background: rgba(30, 30, 30, 0.95);
+}
+
+/* ///////////////////////////////////////////// */
+/* Columns */
+/* ///////////////////////////////////////////// */
+.section.black h2{
+    color: white;
+}
+
+/* ///////////////////////////////////////////// */
+/* Upload Button */
+/* ///////////////////////////////////////////// */
+.backbutton{
+    text-decoration: none;
+}
+
+backbutton{
+    padding: 9px 25px;
+    margin-top: 20px;
+    background-color: transparent;
+    border: 2px solid var(--maincolor);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    font-family: 'Roboto Slab', sans-serif;
+    color: white;
+    font-weight: normal;
+    font-size:20px;
+}
+
+backbutton:hover{
+    transition: all 0.3s ease 0s;
+    background-color: transparent;
+    background: var(--maincolor);
+    color:black;
+    cursor: pointer;
+}
+
+/* ///////////////////////////////////////////// */
+/* Icons and images */
+/* ///////////////////////////////////////////// */
+icon{
+    position: relative;
+    left:48%;
+    top:10px;
+    color:var(--maincolor);    
+}
+
+/* ///////////////////////////////////////////// */
+/* Responsive */
+/* ///////////////////////////////////////////// */
+@media all and (max-width:450px) {
+    icon{
+        position: relative;
+        left:45%;
+        top:0px;
+        color:var(--maincolor);    
+    }
+    .section.black h2{
+        /* margin-left: 12%; */
+        text-align: center;
+    }
+}

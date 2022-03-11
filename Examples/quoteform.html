@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+
+        /* CSS for the whole page */
+        /* This can be put into its own sytle.css file instead */
+        /* https://fluentcolors.com/ good for colors */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            outline: none;
+            font-family: 'Josefin Sans', sans-serif;
+        }
+
+        body {
+            /* background: #fece0c; */
+            background: #002596;
+            /* background:red; */
+
+        }
+
+        .wrapper {
+            margin: 0px;
+            padding: 0;
+            font-family: 'Josefin Sans', sans-serif;
+            background: #002596;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            /* position: center; */
+            /* top: 50%; */
+            /* left: 50%; */
+            /* transform: translate(-50%, -50%); */
+            /* max-width: 400px; */
+            width: 1000px;
+            margin-left: 15%;
+            margin-top: 5%;
+            background: #fff;
+            padding: 25px;
+            border-radius: 5px;
+            /* box-shadow: 4px 4px 2px rgba(254,236,164,1);  */
+            /* 0099BC */
+            box-shadow: 4px 4px 2px #0040ff;
+        }
+
+        .wrapper h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: #332902;
+        }
+
+        .wrapper p {
+            color: #332902;
+            font-size: 0.75em;
+            width: 50%;
+        }
+
+        .wrapper h3 {
+            margin-bottom: 15px;
+            margin-top: 15px;
+        }
+
+        .wrapper .input_field {
+            margin-bottom: 10px;
+        }
+
+        .wrapper .input_field input[type="text"],
+        .wrapper textarea {
+            border: 1px solid #e0e0e0;
+            width: 300%;
+            margin-left: -100%;
+            padding: 10px;
+            /* width: 300px; */
+        }
+
+        .wrapper textarea {
+            resize: none;
+            height: 80px;
+        }
+
+        .wrapper .btn input[type="submit"] {
+            border: 0px;
+            margin-top: 15px;
+            padding: 10px;
+            text-align: center;
+            width: 100%;
+            /* background: #fece0c; */
+            /* background: #0063B1; */
+            background: #002596;
+            /* color: #332902; */
+            color: white;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            font-weight: bold;
+            border-radius: 25px;
+            cursor: pointer;
+        }
+
+        /* .wrapper .btn input[type="submit"]:hover {
+            background: #160060;
+        } */
+
+
+        #error_message {
+            margin-bottom: 20px;
+            background: #fe8b8e;
+            padding: 0px;
+            text-align: center;
+            font-size: 14px;
+            transition: all 0.5s ease;
+        }
+
+        .close {
+            position: relative;
+            left: 150px;
+            top: -10px;
+            width: 32px;
+            height: 32px;
+            opacity: 0.3;
+        }
+
+        .close:hover {
+            opacity: 1;
+        }
+
+        .close:before,
+        .close:after {
+            position: absolute;
+            left: 15px;
+            content: ' ';
+            height: 33px;
+            width: 2px;
+            background-color: #333;
+        }
+
+        .close:before {
+            transform: rotate(45deg);
+        }
+
+        .close:after {
+            transform: rotate(-45deg);
+        }
+
+        @media all and (max-width:800px) {
+            .wrapper {
+                width: 90%;
+                margin: 5%;
+            }
+
+            .wrapper .input_field input[type="text"],
+            .wrapper textarea {
+                width: 200%;
+                margin-left: -50%;
+            }
+
+            .close {
+                left: 215px;
+            }
+
+            .wrapper p {
+                width: 80%;
+            }
+
+        }
+
+        @media all and (max-width:500px) {
+            .wrapper {
+                width: 90%;
+                margin-left: 5%;
+                margin-top: 2%;
+            }
+
+            .wrapper .input_field input[type="text"],
+            .wrapper textarea {
+                width: 150%;
+                margin-left: -25%;
+            }
+
+            .close {
+                left: 120px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <div>
+            <a href="index.html" class="close"></a>
+        </div>
+        <h2>Request a Quote</h2>
+        <p>Please provide the following information and we'll get back to you soon as possible with a quote. Items
+            marked with astericks (*) are required.</p>
+        <div id="error_message">
+
+        </div>
+        <!-- <form action="" id="myform" onsubmit="return validate();"> -->
+        <form action="quote.php" method="post" id="myform">
+            <h3>Personal Information</h3>
+            <div class="input_field">
+                <input type="text" name="name" placeholder="Name*" id="name">
+            </div>
+            <div class="input_field">
+                <input type="text" placeholder="Company" id="company">
+            </div>
+            <div class="input_field">
+                <input type="text" placeholder="Address*" id="address">
+            </div>
+            <div class="input_field">
+                <input type="text" placeholder="City*" id="city">
+            </div>
+            <div class="input_field">
+                <input type="text" placeholder="State*" id="state">
+            </div>
+            <div class="input_field">
+                <input type="text" placeholder="Zip Code*" id="zipcode">
+            </div>
+            <div class="input_field">
+                <input type="text" placeholder="Phone" id="phone">
+            </div>
+            <!-- <div class="input_field">
+                <input type="text" placeholder="Subject" id="subject">
+            </div> -->
+            <div class="input_field">
+                <input type="text"  name="email" placeholder="Email*" id="email">
+            </div>
+            <div class="input_field">
+                <input type="text" placeholder="Fax*" id="fax">
+            </div>
+            <h3>Product Information</h3>
+            <div class="input_field">
+                <input type="text"  name="subject" placeholder="Job Type*" id="subject">
+            </div>
+            <div class="input_field">
+                <input type="text" placeholder="Due Date" id="duedate">
+            </div>
+            <div class="input_field">
+                <input type="text" placeholder="Quantity*" id="quantity">
+            </div>
+            <div class="input_field">
+                <input type="text" placeholder="Finished Size" id="finishedsize">
+            </div>
+            <div class="input_field">
+                <input type="text" placeholder="Sides" id="sides">
+            </div>
+            <div class="input_field">
+                <input type="text" placeholder="Ink" id="ink">
+            </div>
+            <div class="input_field">
+                <input type="text" placeholder="Stock" id="stock">
+            </div>
+            <div class="input_field">
+                <input type="text" placeholder="Artwork" id="artwork">
+            </div>
+            <div class="input_field">
+                <textarea placeholder="Additional Information"  name="message" id="message"></textarea>
+            </div>
+            <div class="btn">
+                <input type="submit" name="submit">
+            </div>
+        </form>
+    </div>
+
+    <script src="scripts/jQuery.js"></script>
+
+    <!-- <script>
+        // This can be placed into its own .js file instead
+        function validate() {
+            var name = document.getElementById("name").value;
+            // var subject = document.getElementById("subject").value;
+            var phone = document.getElementById("phone").value;
+            var email = document.getElementById("email").value;
+            var message = document.getElementById("message").value;
+            var error_message = document.getElementById("error_message");
+
+            error_message.style.padding = "10px";
+
+            var text;
+
+            if (name.length < 4) {
+                text = "Please Enter valid Name";
+                error_message.innerHTML = text;
+                return false;
+            }
+            // if (subject.length < 5) {
+            //     text = "Please Enter Subject";
+            //     error_message.innerHTML = text;
+            //     return false;
+            // }
+            if (isNaN(phone) || phone.length != 10) {
+                text = "Please Enter valid Phone Number";
+                error_message.innerHTML = text;
+                return false;
+            }
+            if (email.indexOf("@") == -1 || email.length < 6) {
+                text = "Please Enter valid Email";
+                error_message.innerHTML = text;
+                return false;
+            }
+            if (message.length <= 1) {
+                text = "Please Enter Message";
+                error_message.innerHTML = text;
+                return false;
+            }
+            alert("Form Submitted Successfully!");
+            return true;
+        }
+    </script> -->
+
+</body>
+
+</html>

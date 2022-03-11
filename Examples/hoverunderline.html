@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            background-color: #DDD;
+        }
+
+        .navbar {
+            border-bottom: 1px solid #BBBBBB;
+        }
+
+        .nav-link {
+            font-weight: bold;
+            font-size: 14px;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: #031D44;
+            padding: 20px 0px;
+            margin: 0px 20px;
+            display: inline-block;
+            position: relative;
+            opacity: 0.75;
+        }
+
+        .nav-link:hover {
+            opacity: 1;
+        }
+
+        .nav-link::before {
+            transition: 300ms;
+            height: 5px;
+            content: "";
+            position: absolute;
+            background-color: #031D44;
+        }
+
+        .nav-link-ltr::before {
+            width: 0%;
+            bottom: 10px;
+        }
+
+        .nav-link-ltr:hover::before {
+            width: 100%;
+        }
+
+        .nav-link-fade-up::before {
+            width: 100%;
+            bottom: 5px;
+            opacity: 0;
+        }
+
+        .nav-link-fade-up:hover::before {
+            bottom: 10px;
+            opacity: 1;
+        }
+
+        .nav-link-grow-up::before {
+            height: 0%;
+            width: 100%;
+            bottom: 0px;
+        }
+
+        .nav-link-grow-up:hover::before {
+            height: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <a class="nav-link nav-link-ltr" href="#">Home</a>
+        <a class="nav-link nav-link-ltr" href="#">About</a>
+        <a class="nav-link nav-link-ltr" href="#">Contact</a>
+        <a class="nav-link nav-link-ltr" href="#">Blog</a>
+    </div>
+
+    <div class="navbar">
+        <a class="nav-link nav-link-fade-up" href="#">Home</a>
+        <a class="nav-link nav-link-fade-up" href="#">About</a>
+        <a class="nav-link nav-link-fade-up" href="#">Contact</a>
+        <a class="nav-link nav-link-fade-up" href="#">Blog</a>
+    </div>
+
+    <div class="navbar">
+        <a class="nav-link nav-link-grow-up" href="#">Home</a>
+        <a class="nav-link nav-link-grow-up" href="#">About</a>
+        <a class="nav-link nav-link-grow-up" href="#">Contact</a>
+        <a class="nav-link nav-link-grow-up" href="#">Blog</a>
+    </div>
+</body>
+
+</html>

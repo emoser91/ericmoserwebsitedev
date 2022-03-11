@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .et-hero-tabs a {
+            text-decoration: none;
+        }
+
+        .et-hero-tabs {
+            font-family: Roboto, 'Open Sans', Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            /* height: 4em; */
+            position: relative;
+            background: #eee;
+            text-align: center;
+            /* padding: 0 2em; */
+        }
+
+        .et-slide {
+            font-family: Roboto, 'Open Sans', Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            position: relative;
+            background: #eee;
+            text-align: center;
+            padding: 0 2em;
+        }
+
+        .banner {
+            width: 100%;
+            height: 400px;
+            /* TODO: Just took this photo, need to buy it prolly */
+            background-image: url("images/inkwater.jpg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .et-hero-tabs h1 {
+            font-size: 4rem;
+            margin-top: 100px;
+            color: rgb(0, 0, 0);
+            /* margin: 0; */
+            /* letter-spacing: .5rem; */
+        }
+
+        .et-hero-tabs h3 {
+            font-size: 1rem;
+            letter-spacing: 0.3rem;
+            opacity: 0.6;
+        }
+
+        .et-hero-tabs-container {
+            display: flex;
+            flex-direction: row;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 70px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            background: #fff;
+            z-index: 10;
+        }
+
+        .et-hero-tabs-container--top {
+            position: fixed;
+            top: 0;
+        }
+
+        .et-hero-tab {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex: 1;
+            color: #000;
+            letter-spacing: 0.1rem;
+            transition: all 0.5s ease;
+            font-size: 0.8rem;
+        }
+
+        .et-hero-tab:hover {
+            color: white;
+            transition: all 0.5s ease;
+        }
+
+        #tab1:hover {
+            background: rgb(9, 166, 228);
+            /* background: #29D8C1; */
+        }
+
+        #tab2:hover {
+            background: rgb(255, 0, 242);
+            /* background: #F72A53; */
+        }
+
+        #tab3:hover {
+            background: rgb(248, 224, 7);
+            /* background: #FF9F1C; */
+        }
+
+        #tab4:hover {
+            background: rgb(32, 32, 32);
+            /* background: #394053; */
+        }
+
+        .et-hero-tab-slider {
+            position: absolute;
+            bottom: 0;
+            width: 0;
+            height: 6px;
+            background: #66B1F1;
+            transition: left 0.3s ease;
+        }
+
+        #tab-design {
+            background: rgb(9, 166, 228);
+            /* background: #29D8C1; */
+        }
+
+        #tab-printing {
+            background: rgb(255, 0, 242);
+            /* background: #F72A53; */
+        }
+
+        #tab-finishing {
+            background: yellow;
+            /* background: #FF9F1C; */
+        }
+
+        #tab-mailing {
+            background: rgb(32, 32, 32);
+            /* background: #394053; */
+        }
+
+        @media (min-width: 800px) {
+
+            .et-hero-tabs,
+            .et-slide h1 {
+                font-size: 3rem;
+            }
+
+            .et-hero-tabs h1 {
+                margin-top: 200px;
+            }
+
+            .et-slide h3 {
+                font-size: 1rem;
+            }
+
+            .et-hero-tabs h1 {
+                font-size: 5rem;
+            }
+
+            .et-hero-tab {
+                font-size: 1rem;
+            }
+
+            .banner {
+                height: 600px;
+            }
+        }
+
+        /* ///////////////////////////////////////////// */
+        /* FOOTER */
+        /* ///////////////////////////////////////////// */
+
+        footer {
+            /* background: #222;  */
+            background: rgba(30, 30, 30);
+            color: gray;
+            font-size: 16px;
+            font-weight: bold;
+            padding: 20px 20px;
+            text-align: center;
+
+            display: grid;
+            grid-template-columns: 100%;
+            grid-gap: 1em;
+            padding: 1em;
+            font-family: 'Roboto Slab', sans-serif;
+        }
+
+        footnav ul {
+            margin: 0;
+            padding: 0;
+            height: 40px;
+            list-style-type: none;
+            border-bottom: 1px dotted gray;
+        }
+
+        footnav li {
+            text-decoration: none;
+            display: inline-block;
+            margin-right: 20px;
+            border-radius: 3px;
+            padding: 2px;
+        }
+
+        #reachout {
+            color: white;
+            font-size: 18px;
+        }
+
+        #contacts {
+            color: white;
+        }
+
+        #copyright {
+            border-top: 1px dotted gray;
+            height: 40px;
+            font-size: 12px;
+        }
+
+        footer a {
+            text-decoration: none;
+            color: gray;
+        }
+
+        footer a:hover {
+            color: white;
+        }
+
+
+        #social {
+            margin: 20px 10px;
+            text-align: center;
+        }
+
+        .smGlobalBtn {
+            /* global button class */
+            display: inline-block;
+            position: relative;
+            cursor: pointer;
+            width: 50px;
+            height: 50px;
+            border: 1px solid #ddd;
+            /* add border to the buttons */
+            padding: 0px;
+            margin: 10px;
+            text-decoration: none;
+            text-align: center;
+            color: #fff;
+            font-size: 25px;
+            font-weight: normal;
+            line-height: 2em;
+            border-radius: 27px;
+            -moz-border-radius: 27px;
+            -webkit-border-radius: 27px;
+        }
+
+        /* facebook button class*/
+        .facebookBtn {
+            background: #4060A5;
+        }
+
+        .facebookBtn:before {
+            /* use :before to add the relevant icons */
+            font-family: "FontAwesome";
+            content: "\f09a";
+            /* add facebook icon */
+        }
+
+        .facebookBtn:hover {
+            color: #4060A5;
+            background: #fff;
+            border-color: #4060A5;
+            /* change the border color on mouse hover */
+        }
+
+        /* linkedin button class*/
+        .linkedinBtn {
+            background: #0094BC;
+        }
+
+        .linkedinBtn:before {
+            font-family: "FontAwesome";
+            content: "\f0e1";
+            /* add linkedin icon */
+        }
+
+        .linkedinBtn:hover {
+            color: #0094BC;
+            background: #fff;
+            border-color: #0094BC;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Hero -->
+    <section class="et-hero-tabs">
+        <div class="banner">
+            <h1>Services</h1>
+        </div>
+        <!--     <h3>Sliding content with sticky tab nav</h3> -->
+        <div class="et-hero-tabs-container">
+            <a class="et-hero-tab" id="tab1" href="#tab-design">Design</a>
+            <a class="et-hero-tab" id="tab2" href="#tab-printing">Printing</a>
+            <a class="et-hero-tab" id="tab3" href="#tab-finishing">Finishing</a>
+            <a class="et-hero-tab" id="tab4" href="#tab-mailing">Mailing</a>
+            <span class="et-hero-tab-slider"></span>
+        </div>
+    </section>
+
+    <!-- Main -->
+    <main class="et-main">
+        <section class="et-slide" id="tab-design">
+            <h1>Design</h1>
+            <h3>something about design</h3>
+        </section>
+        <section class="et-slide" id="tab-printing">
+            <h1>Printing</h1>
+            <h3>something about printing</h3>
+        </section>
+        <section class="et-slide" id="tab-finishing">
+            <h1>Finishing</h1>
+            <h3>something about finishing</h3>
+        </section>
+        <section class="et-slide" id="tab-mailing">
+            <h1>Mailing</h1>
+            <h3>something about mailing</h3>
+        </section>
+    </main>
+
+    <footer id="Footer">
+        <footnav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutus.html">About</a></li>
+                <li><a href="services.html">Services</a> </li>
+                <li><a href="faq.html">FAQ</a> </li>
+                <li><a href="requestaquote.html">Quote</a> </li>
+            </ul>
+        </footnav>
+        <div id="social">
+            <a class="facebookBtn smGlobalBtn" href="https://www.facebook.com/" target="_blank"></a>
+            <a class="linkedinBtn smGlobalBtn" href="https://www.linkedin.com/" target="_blank"></a>
+        </div>
+        <div id=reachout>
+            <p>We're based in Kenosha, Wisconsin.</p>
+            <p>We work with clients from all over. Get in touch with us!</p>
+        </div>
+        <div id=contacts>
+            <p>info@brookstoneprinting.com &nbsp; &nbsp; (262) 255-3130 &nbsp; &nbsp; 7325 30th Ave, Kenosha, WI 53142
+            </p>
+        </div>
+        <div id=copyright>
+            <p>©2020. All Rights Reserved | Brookstone Printing</p>
+        </div>
+    </footer>
+
+    <script src="scripts/jQuery.js"></script>
+
+    <script>
+        class StickyNavigation {
+
+            constructor() {
+                this.currentId = null;
+                this.currentTab = null;
+                this.tabContainerHeight = 70;
+                let self = this;
+                $('.et-hero-tab').click(function () {
+                    self.onTabClick(event, $(this));
+                });
+                $(window).scroll(() => { this.onScroll(); });
+                $(window).resize(() => { this.onResize(); });
+            }
+
+            onTabClick(event, element) {
+                event.preventDefault();
+                let scrollTop = $(element.attr('href')).offset().top - this.tabContainerHeight + 1;
+                $('html, body').animate({ scrollTop: scrollTop }, 600);
+            }
+
+            onScroll() {
+                this.checkTabContainerPosition();
+                this.findCurrentTabSelector();
+            }
+
+            onResize() {
+                if (this.currentId) {
+                    this.setSliderCss();
+                }
+            }
+
+            checkTabContainerPosition() {
+                let offset = $('.et-hero-tabs').offset().top + $('.et-hero-tabs').height() - this.tabContainerHeight;
+                if ($(window).scrollTop() > offset) {
+                    $('.et-hero-tabs-container').addClass('et-hero-tabs-container--top');
+                }
+                else {
+                    $('.et-hero-tabs-container').removeClass('et-hero-tabs-container--top');
+                }
+            }
+
+            findCurrentTabSelector(element) {
+                let newCurrentId;
+                let newCurrentTab;
+                let self = this;
+                $('.et-hero-tab').each(function () {
+                    let id = $(this).attr('href');
+                    let offsetTop = $(id).offset().top - self.tabContainerHeight;
+                    let offsetBottom = $(id).offset().top + $(id).height() - self.tabContainerHeight;
+                    if ($(window).scrollTop() > offsetTop && $(window).scrollTop() < offsetBottom) {
+                        newCurrentId = id;
+                        newCurrentTab = $(this);
+                    }
+                });
+                if (this.currentId != newCurrentId || this.currentId === null) {
+                    this.currentId = newCurrentId;
+                    this.currentTab = newCurrentTab;
+                    this.setSliderCss();
+                }
+            }
+
+            setSliderCss() {
+                let width = 0;
+                let left = 0;
+                if (this.currentTab) {
+                    width = this.currentTab.css('width');
+                    left = this.currentTab.offset().left;
+                }
+                $('.et-hero-tab-slider').css('width', width);
+                $('.et-hero-tab-slider').css('left', left);
+            }
+
+        }
+
+        new StickyNavigation();
+    </script>
+
+</body>
+
+</html>

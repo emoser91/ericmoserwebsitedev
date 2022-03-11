@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+
+        /* Fonts */
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:700');
+
+/* Positioning */
+
+.container {
+	min-height: 100%;
+}
+
+.center {
+	top: 50%; left: 50%;
+	position: absolute;
+	transform: translate(-50%, -50%);
+}
+
+.apple {
+	
+	/* Text Background Effect */
+	
+	background: url('http://doodling.surge.sh/assets/images/bg-1.jpg');
+	-webkit-background-clip: text;
+	color: transparent;
+
+	/* Other */
+	
+	font-family: 'Roboto', sans-serif;
+	font-size: 100px;
+	font-weight: 900;
+	animation: slice 3s, dynamic 7s infinite alternate linear;
+	white-space: nowrap;
+	
+}
+
+
+* {
+	user-select: none;
+}
+
+@media screen and (max-width: 480px) {
+	.apple {
+		font-size: 70px;
+	}
+}
+
+/* Slice Animation */
+
+/* @keyframes slice {
+	
+	0% {	line-height: 0%; }
+	
+	100% {	line-height: 100%; }
+	
+} */
+
+/* Dynamic Background Animation */
+
+@keyframes dynamic {
+	
+	0% {	background-position: 0% }
+	
+	100% {	background-position: 100%; }
+	
+}
+
+    </style>
+</head>
+<body>
+    
+<div class="container">
+	<div class="center">
+		<h1 class="apple">Send Nudes</h1>
+	</div>
+</div>
+
+<!-- External Media -->
+
+<link href="https://use.fontawesome.com/releases/v5.0.2/css/all.css" rel="stylesheet">
+
+</div>
+</body>
+</html>
