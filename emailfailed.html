@@ -65,7 +65,7 @@
             <icon class="fa fa-envelope fa-4x"></icon>
             <h1>Your Message <br> Failed to Send!</h1>
             <h2>Please Fill out Your Form and Try Again!</h2>
-            <h2>Make sure to fill out as much of the form as you can. If this issue persists, please email me directly at main@ericmoser.com</h2>
+            <h2>Make sure to fill out as much of the form as you can. If this issue persists, please email me directly at contact@ericmoser.com</h2>
             <div class="col one"><a class="backbutton" href="index.html">
                 <backbutton>Back Home</backbutton>
             </a></div>
@@ -115,12 +115,12 @@
     <!-- Modal Section -->
     <div class="bg-modal">
         <div class="modal-content">
-            <a href="emailsuccess.html" class="close"></a>
+            <a href="emailfailed.html" class="close"></a>
             <h2>Contact</h2>
             <div id="error_message">
 
             </div>
-            <form action="#" id="myform" method="post" onsubmit="return validate();">
+            <form action="scripts/contact.php" id="myform" method="post" onsubmit="return validate();">
                 <div class="input_field">
                     <i class="fa fa-user"></i>
                     <input type="text" name="name" placeholder="Name" id="name">

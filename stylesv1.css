@@ -235,7 +235,7 @@ h2 {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-image: url("../images/EricMoserLogo2.SVG");
+    background-image: url("../images/EricMoserLogo2.svg");
     background-repeat: no-repeat;
     background-size: contain;
     float: left;
@@ -353,7 +353,7 @@ button:hover{
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-image: url("../images/EricMoserLogo2.SVG");
+    background-image: url("../images/EricMoserLogo2.svg");
     background-repeat: no-repeat;
     background-size: contain;
     float: left;
@@ -1274,21 +1274,21 @@ time {
 /* Project Section */
 /* ///////////////////////////////////////////// */
 #projectimage1{
-    background-image: url("../images/BSImage.jpg");
+    background-image: url("../images/BSImage.JPG");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 #projectimage2{
-    background-image: url("../images/capturetest.jpg");
+    background-image: url("../images/CaptureTest.JPG");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 #projectimage3{
-    background-image: url("../images/SeniorDesignImage.jpg");
+    background-image: url("../images/SeniorDesignImage.JPG");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1434,7 +1434,7 @@ h3.ctatext.bottom{
 
 #logocta{
     display: flex;
-    background-image: url("../images/EricMoserLogoBlack.SVG");
+    background-image: url("../images/EricMoserLogoBlack.svg");
     background-repeat: no-repeat;
     background-size: contain;
     height: 80px;
@@ -2114,7 +2114,7 @@ form{
     }
 
     #projectimagemobile1{
-        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/BSImage.jpg");
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/BSImage.JPG");
         /* background-image: url("../images/BSImage.jpg"); */
         background-position: center;
         background-repeat: no-repeat;
@@ -2122,7 +2122,7 @@ form{
     }
 
     #projectimagemobile1:hover{
-        background-image: url("../images/BSImage.jpg");
+        background-image: url("../images/BSImage.JPG");
     }
 
     .box2 .servicetext:hover{
@@ -2134,7 +2134,7 @@ form{
     }
   
     #projectimagemobile2{
-        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/capturetest.jpg");
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/CaptureTest.JPG");
         /* background-image: url("../images/capturetest.jpg"); */
         background-position: center;
         background-repeat: no-repeat;
@@ -2142,11 +2142,11 @@ form{
     }
 
     #projectimagemobile2:hover{
-        background-image: url("../images/capturetest.jpg");
+        background-image: url("../images/CaptureTest.JPG");
     }
     
     #projectimagemobile3{
-        background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url("../images/SeniorDesignImage.jpg");
+        background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url("../images/SeniorDesignImage.JPG");
         /* background-image: url("../images/SeniorDesignImage.jpg"); */
         background-position: center;
         background-repeat: no-repeat;
@@ -2154,7 +2154,7 @@ form{
     }
 
     #projectimagemobile3:hover{
-        background-image: url("../images/SeniorDesignImage.jpg");
+        background-image: url("../images/SeniorDesignImage.JPG");
     }
 
     .box2 h1, .box2left h1{
