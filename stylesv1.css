@@ -1339,10 +1339,11 @@ time {
 /* About Section */
 /* ///////////////////////////////////////////// */
 #aboutmeimage{
-    background-image: url("images/Eric.jpg");
+    background-image: url("images/Eric5.jpeg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    background-position-y: top;
     /* border-radius: 50%; */
 }
 
